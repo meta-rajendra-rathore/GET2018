@@ -102,6 +102,8 @@ class ShoppingCart{											// ShoppingCart class to contain items
 		System.out.println("Total amount : " + totalBill);
 		System.out.print("Enter Promo code (Enter no if you don't have any) : ");
 		userCode = scan.next();
+		if(userCode.equals("no")||userCode.equals("NO"))
+			return;
 		if(fixedOrderPromotion.isPromotionApplicable(totalBill,userCode))		// checking order amount based discount
 			totalDiscount = fixedOrderPromotion.getFixedDiscount()*totalBill;
 		else if(fixedProductPromotion.isPromotionApplicable(totalQuantity,totalBill,userCode))	// checking no of product & amount based discount
