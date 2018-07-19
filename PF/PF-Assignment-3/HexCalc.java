@@ -79,7 +79,11 @@ class HexOpration {
 				result = num1 * num2;
 				break;
 			case '/' :
-				result = num1 / num2;
+				try {
+					result = num1 / num2;
+				} catch (Exception e) {
+					System.out.println("Exception : " + e);
+				}
 				break;
 			default : 
 				result = -1;
