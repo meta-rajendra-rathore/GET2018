@@ -9,18 +9,18 @@ import java.util.regex.*;
 import java.lang.Math;
 class HexOpration {
 	
-	public boolean isDecimal(String userInput){
+	public boolean isDecimal(String userInput) {
 		return Pattern.matches("[(0-9)]*",userInput);		// @return false if userInput contain anything else than 0-9
 	}
 	
-	public boolean isHexa(String userInput){
+	public boolean isHexa(String userInput) {
 		return Pattern.matches("([0-9A-F]*)",userInput);   // @return false if userInput contain anything else than 0-9 and A-F
 	}
 	
 	public int hexToDecimal(String userInput) {
 		int dec = 0;
 		int digit;
-		for(int i = 0; i < userInput.length(); i++) {
+		for (int i = 0; i < userInput.length(); i++) {
 			digit = (int)userInput.charAt(i);
 			if(digit > 57)									//  checking if character in hex number is greater than 57 : ASCII value of 9
 				digit -= 55;								// for characters
@@ -65,7 +65,7 @@ class HexOpration {
 		int result;
 		num1 = hexToDecimal(hex1);
 		num2 = hexToDecimal(hex2);
-		switch(operation) {
+		switch (operation) {
 			case '+' :
 				result = num1 + num2;
 				break;
@@ -110,7 +110,7 @@ public class HexCalc {
 			System.out.print("Enter your choice : ");
 			choice = scan.next().charAt(0);
 			
-			switch(choice) {
+			switch (choice) {
 				
 				case '1' :
 					System.out.print("Enter the decimal number : ");
