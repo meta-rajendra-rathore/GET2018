@@ -22,6 +22,8 @@ public class JobScheduler {
 		int waitingTime[] = new int[noOfProcess];
 		int totalWaitingTime = 0;
 		int avgWaitingTime = 0;
+		int maximumWaitingTime = 0;
+		int maximumWaitingTimeIndex = 0;
 
 		System.out.println("\nARRIVAL TIME");		// taking arrival time
 		for(int i = 0 ; i < noOfProcess ; i++) {
@@ -35,47 +37,46 @@ public class JobScheduler {
 			burstTime[i] = scan.nextInt();
 		}
 		
-		System.out.println("\nCOMPLETION TIME :-");
-		for(int i=0 ; i < noOfProcess ; i++) {		//computing completion time
-			if(i==0) {
-				completionTime[i] = arrivalTime[i] + burstTime[i];
+		for (int i = 0; i < noOfProcess; i++) {
+			if ((arrivalTime[i] < 0) || (burstTime[i] < 0)) {
+				System.out.println("Arrival Time or Burst Time can't be negative");
 			}
-			else {
-				if(arrivalTime[i] > completionTime[i-1]) {
-				 	completionTime[i] = arrivalTime[i] + burstTime[i];
+		}
+		
+		for (int i = 0; i < noOfProcess; i++) {
+			if ((i + 1) < noOfProcess) {
+				if (arrivalTime[i] >= arrivalTime[i + 1]) {
+					System.out.println("Arrival Time of Process " + (i + 1) + " is greater than or equal to " + (i + 2));
+					System.exit(1);
 				}
-				else {
+			}
+		}
+		
+		for (int i = 0; i < noOfProcess; i++) {		
+			if (i==0) {
+				completionTime[i] = arrivalTime[i] + burstTime[i];
+			} else {
+				if (arrivalTime[i] > completionTime[i-1]) {
+				 	completionTime[i] = arrivalTime[i] + burstTime[i];
+				} else {
 				 	completionTime[i] = completionTime[i-1] + burstTime[i];
 				}
 			}
-			System.out.println("The completion time for process " + (i+1) + " is " + completionTime[i]);
-		}
-		
-		System.out.println("\nTURN AROUND TIME :-");		// computing turn around time
-		for(int i=0 ; i < noOfProcess ; i++) {
 			turnAroundTime[i] = completionTime[i] - arrivalTime[i];
-			System.out.println("The turn around time for process " + (i+1) + " is " + turnAroundTime[i]);
-		}
-		
-		System.out.println("\nWAITING TIME :-");			// computing waiting time
-		for(int i=0 ; i < noOfProcess ; i++) {
 			waitingTime[i] = turnAroundTime[i] - burstTime[i];
-			System.out.println ("The waiting time for process " + (i+1) + " is " + waitingTime[i]);
 			totalWaitingTime += waitingTime[i];
 		}
 		
-		avgWaitingTime = totalWaitingTime / noOfProcess;
-		System.out.println("\nThe average waiting time is " + avgWaitingTime); 
-		
-		
-		int biggest = 0;
-		int bigIndex = 0;
-		for(int i = 0 ; i < noOfProcess ; i++){
-			if(waitingTime[i] > biggest) {
-				biggest = waitingTime[i];
-				bigIndex = i;
+		System.out.println("Process No\tCompletion Time\tTurnAround Time\tWaiting Time");
+		for (int i = 0; i < noOfProcess; i++) {
+			System.out.println(i + 1 + "\t\t" +completionTime[i] + "\t\t\t" + turnAroundTime[i] + "\t\t" + waitingTime[i]);
+			if(maximumWaitingTime < waitingTime[i]) {
+				maximumWaitingTime = waitingTime[i];
 			}
 		}
-		System.out.println("Maximum waiting time period is of process " + (bigIndex + 1) + " in queue and is equal to : " + biggest);
+		
+		System.out.println("Maximum Waiting Time :- " + maximumWaitingTime);
+		avgWaitingTime = totalWaitingTime / noOfProcess;
+		System.out.println("The average waiting time is " + avgWaitingTime);
 	}
 }
