@@ -1,6 +1,6 @@
 /**
  * This class is used to provide various conversion, arithmetic and compare functions on hexadecimal numbers
- * @authore Rajendra Singh Rathore
+ * @author Rajendra Singh Rathore
  *
  */
  
