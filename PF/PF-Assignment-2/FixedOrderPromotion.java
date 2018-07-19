@@ -1,5 +1,5 @@
 /*
- * This class is used to provide used to provide promotion discount on the basis of products
+ * This class is used to provide used to provide promotion discount on the basis of bill amount
  * @authore Rajendra Singh Rathore
  *
  */
