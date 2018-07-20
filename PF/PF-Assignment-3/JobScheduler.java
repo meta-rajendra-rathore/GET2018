@@ -29,7 +29,7 @@ public class JobScheduler {
 			
 			System.out.print("\nEnter arrival time of process " + (i+1) + " : ");
 			arrivalTime[i] = scan.nextInt();
-			System.out.print("Enter burst time of process " + (i+1) + " : ");
+			System.out.print("Enter burst time of process " + (i+1) + "   : ");
 			burstTime[i] = scan.nextInt();
 			
 			if ((arrivalTime[i] < 0) || (burstTime[i] < 0)) {
@@ -38,11 +38,15 @@ public class JobScheduler {
 			
 			if ((i + 1) <= noOfProcess && i != 0) {
 				if (arrivalTime[i] < arrivalTime[i - 1]) {
-					System.out.println("Arrival Time of Process " + i + " is earlier than earlier process "");
+					System.out.println("Arrival Time of Process " + i + " is earlier than earlier process ");
 					System.exit(1);
 				}
 			}
-			
+		}
+		
+		System.out.println("\n\nProcess No\tCompletion Time\tTurnAround Time\tWaiting Time");
+		
+		for (int i = 0 ; i < noOfProcess ; i++) {
 			if (i==0) {
 				completionTime[i] = arrivalTime[i] + burstTime[i];
 			} else {
@@ -52,15 +56,13 @@ public class JobScheduler {
 				 	completionTime[i] = completionTime[i-1] + burstTime[i];
 				}
 			}
+			
 			turnAroundTime[i] = completionTime[i] - arrivalTime[i];
 			waitingTime[i] = turnAroundTime[i] - burstTime[i];
 			totalWaitingTime += waitingTime[i];
-		}
-		
-		System.out.println("\n\nProcess No\tCompletion Time\tTurnAround Time\tWaiting Time");
-							   
-		for (int i = 0; i < noOfProcess; i++) {
+			
 			System.out.println(i + 1 + "\t\t" +completionTime[i] + "\t\t\t" + turnAroundTime[i] + "\t\t" + waitingTime[i]);
+			
 			if (maximumWaitingTime < waitingTime[i]) {
 				maximumWaitingTime = waitingTime[i];
 			}
