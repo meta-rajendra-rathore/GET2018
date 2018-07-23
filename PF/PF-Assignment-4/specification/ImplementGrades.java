@@ -6,7 +6,11 @@
 
 package specification;
 
+<<<<<<< HEAD
 //import java.util.Scanner;
+=======
+import java.util.Scanner;
+>>>>>>> a745297586dd13a7a7ae4c0a1de875f4b768cfa6
 
 class Marksheet {
 	double grades[];
@@ -18,12 +22,17 @@ class Marksheet {
 	 * 
 	 */
 	public Marksheet(int noOfStudents) { 
+<<<<<<< HEAD
 		if (noOfStudents == 0) {
 			throw new AssertionError();
 		} else {
 			this.noOfStudents = noOfStudents;
 			grades = new double[noOfStudents];  
 		}
+=======
+		this.noOfStudents = noOfStudents;
+		grades = new double[noOfStudents];  
+>>>>>>> a745297586dd13a7a7ae4c0a1de875f4b768cfa6
 	}
 	
 	/**
@@ -33,10 +42,14 @@ class Marksheet {
 	 */
 	void initializeGrades(int[] inputGrade) {
 		for (int i = 0; i < noOfStudents; i++) {
+<<<<<<< HEAD
 			if (inputGrade[i] <0 || inputGrade[i] > 100)
 				throw new AssertionError();
 			else 
 				grades[i] = inputGrade[i];
+=======
+			grades[i] = inputGrade[i];
+>>>>>>> a745297586dd13a7a7ae4c0a1de875f4b768cfa6
 		}
 	}
 	
@@ -110,13 +123,20 @@ class Marksheet {
 	 */
 	double percentOfPassedStudents() {
 		int noOfPassedStudents = 0;
+<<<<<<< HEAD
 		System.out.println(""+noOfPassedStudents);
+=======
+>>>>>>> a745297586dd13a7a7ae4c0a1de875f4b768cfa6
 		for (int i = 0; i < noOfStudents; i++) {
 			if (grades[i] >= 40) {
 				noOfPassedStudents++;
 			}
 		}
+<<<<<<< HEAD
 		return (noOfPassedStudents * 100.0) / noOfStudents;
+=======
+		return Math.round((double)noOfPassedStudents / noOfStudents * 100);
+>>>>>>> a745297586dd13a7a7ae4c0a1de875f4b768cfa6
 	}
 }
 

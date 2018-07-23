@@ -32,6 +32,12 @@ class Marksheet {
 		for (int i = 0; i < noOfStudents; i++) {
 			System.out.print("Enter the grade for Student " + (i + 1) + " between 0 to 100 : ");
 			grades[i] = scan.nextDouble(); 
+		
+			if (grades[i] > 100 || grades[i] < 0) {		// exit if invalid grades are entered
+				scan.close();								// closing scanner object
+				System.out.println("Entered grades should only be between 0 and 100");
+				System.exit(1);
+			}
 		}
 	}
 	
@@ -98,20 +104,6 @@ class Marksheet {
 		}
 		return Math.round((double)noOfPassedStudents / noOfStudents * 100);
 	}
-	
-	/**
-	 * Check if grades are in valid range 0 to 100
-	 * 
-	 * @return true if any of grades is invalid, otherwise false 
-	 */
-	boolean invalidGrades() {
-		for (int i = 0; i < noOfStudents; i++) {
-			if (grades[i] > 100 || grades[i] < 0) {
-				return true;
-			}
-		}
-		return false;
-	}
 }
 
 /**
@@ -130,12 +122,6 @@ public class ImplementGrades {
 		Marksheet marksheetOfStudents = new Marksheet(noOfstudents);
 		
 		marksheetOfStudents.initializeGrades();
-		
-		if (marksheetOfStudents.invalidGrades()) {		// exit if invalid grades are entered
-			scan.close();								// closing scanner object
-			System.out.println("Entered grades should only be between 0 and 100");
-			System.exit(1);
-		}
 		
 		while (true) {
 			System.out.println("OPERATION MENU");
