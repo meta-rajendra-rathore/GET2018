@@ -12,12 +12,9 @@ public class IntSet {
 	/**
 	 * public constructor
 	 */
-	public IntSet() {
-		MAX_SIZE = 15;
-		intSetArray = new int[MAX_SIZE];
-		for (int i = 0; i < MAX_SIZE; i++) {
-			intSetArray[i] = 0;
-		}
+	public IntSet(int maxSize, int[] userArray) {
+		MAX_SIZE = maxSize;
+		intSetArray = userArray;
 	}
 
 	/**
@@ -56,14 +53,14 @@ public class IntSet {
 	 * return the size of the set
 	 * @return size
 	 */
-	public int size() {
-		int size = 0;
+	public int getSize() {
+		/*int size = 0;
 		for (int i = 0; i < MAX_SIZE; i++) {
 			if (intSetArray[i] != 0)
 				size++;
 			else
 				return size;
-		}
+		}*/
 		return size;
 	}
 
