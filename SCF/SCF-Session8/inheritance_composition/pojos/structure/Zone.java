@@ -12,9 +12,9 @@ public class Zone {
     boolean hasPark, hasCanteen;
     List<Cage> listOfCages = new ArrayList<Cage>();
     
-    public Zone(int capacity, Category category2, boolean hasPark, boolean hasCanteen) {
+    public Zone(int capacity, Category category, boolean hasPark, boolean hasCanteen) {
         this.capacity = capacity;
-        this.category = category2;
+        this.category = category;
         this.hasPark = hasPark;
         this.hasCanteen = hasCanteen;
     }
@@ -62,11 +62,12 @@ public class Zone {
         return false;
     }
     
-    public String getAnimalInfo(String name) {
-        for (Cage cage : listOfCages) {
+    public String getAnimalInfo(int cageNo, String id) {
+        return listOfCages.get(cageNo).getAnimalInfo(id);
+        /*for (Cage cage : listOfCages) {
             if (!cage.getAnimalInfo(name).equals("null"))
                 return cage.getAnimalInfo(name);
         }
-        return "null";
+        return "null";*/
     }
 }

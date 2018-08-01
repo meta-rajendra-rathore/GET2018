@@ -7,30 +7,17 @@ import inheritance_composition.implementation.Category;
 import inheritance_composition.implementation.TypeOfAnimal;
 
 public class Cage {
+    int pointer;
     int capacity;
     TypeOfAnimal typeOfAnimal;
     Category categoryOfZone;
     List<Animal> listOfAnimals = new ArrayList<Animal>();
 
     public Cage(int capacity, Category category, TypeOfAnimal animalType) {
+        pointer = 1;
         this.capacity = capacity;
         this.categoryOfZone = category;
-        switch (animalType) {
-        case Crocodile:
-            this.typeOfAnimal = TypeOfAnimal.Crocodile;
-            break;
-        case Tiger:
-            this.typeOfAnimal = TypeOfAnimal.Tiger;
-            break;
-        case Peacock:
-            this.typeOfAnimal = TypeOfAnimal.Peacock;
-            break;
-        case Lizard:
-            this.typeOfAnimal = TypeOfAnimal.Lizard;
-            break;
-        default:
-            throw new AssertionError("No such animal exists!");
-        }
+        this.typeOfAnimal = animalType;
     }
 
     public int getCapacity() {
@@ -51,6 +38,7 @@ public class Cage {
                 listOfAnimals.add(animal);
                 System.out.println("\n\nAnimal " + animal.getName() + " added successfully, Details are below :\nZone : " + (zone + 1)
                         + "\nCage : " + (i + 1));
+                animal.setId("" + (zone + 1) + "-" + (i + 1) + "-" + pointer++);
                 return true;
             }
 
@@ -60,30 +48,37 @@ public class Cage {
 
     public String getInfo() {
         String animals = "";
+        int index = 1;
         for (Animal animal : listOfAnimals) {
-            int index = 1;
-            animals = "\n" + index + ". " + animal.getName();
+            animals += "\n" + index++ + ". " + animal.getName();
         }
         return "\nDetails of the cage :\n\nType of animal contained : " + getTypeOfAnimal() + "\nCapacity of the cage : " + getCapacity()
-                + "\nList of animals : " + animals + "\nThat's all.\n";
+                + "\nList of animals : " + animals + "\nThat's all.\n\n";
     }
     
     public boolean removeAnimal(String name) {
         for (Animal animal : listOfAnimals) {
             if (name.equals(animal.getName())) {
                 listOfAnimals.remove(animal);
+                System.out.println("\nAnimal " + animal.getName() + " was removed successfully.");
                 return true;
             }
         }
         return false;
     }
     
-    public String getAnimalInfo(String name) {
-        for (Animal animal : listOfAnimals) {
+    public String getAnimalInfo(String id) {
+       for (Animal animal : listOfAnimals) {
+           if (animal.getId().equals(id)) {
+               return animal.getInfo();
+           }
+       }
+       return null;
+        /*for (Animal animal : listOfAnimals) {
             if (name.equals(animal.getName())) {
                 return animal.getInfo();
             }
         }
-        return "null";
+        return "null";*/
     }
 }

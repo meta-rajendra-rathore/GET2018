@@ -64,12 +64,16 @@ public class ZooManagement {
         return false;
     }
     
-    public String getAnimalInfo(String name) {
-        for (Zone zone : listOfZones) {
+    public String getAnimalInfo(String id) {
+        String[] separatedID = id.split("-"); 
+        int[] idParts = {Integer.parseInt(separatedID[0]), Integer.parseInt(separatedID[1])};
+        
+        return listOfZones.get(idParts[0]-1).getAnimalInfo(idParts[1]-1, id);
+        /*for (Zone zone : listOfZones) {
             String info = zone.getAnimalInfo(name);
             if (!info.equals("null"))
                 return info;
         }
-        return "null";
+        return "null";*/
     }
 }
