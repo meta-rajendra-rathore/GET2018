@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.StringTokenizer;
 
 /**
- * @author Ayushi Khandelwal
+ * @author Rajendra Singh Rathore
  *
  */
 public class ListOLists implements IList {
