@@ -15,18 +15,19 @@ public class VirtualCMD {
     static Directory currentDir;
 
     public static void main(String[] args) {
-        System.out.println(": : : : Welcome to Metacube Virtual Command Prompt : : : :\n");
+        System.out
+                .println(": : : : Welcome to Metacube Virtual Command Prompt : : : :\n");
         String command;
 
         root = new Directory("R:", null);
         currentDir = root;
 
         while (true) {
-            
+
             System.out.print(getFullPath(currentDir) + "/> ");
             Scanner scan = new Scanner(System.in);
             command = scan.nextLine().trim();
-            
+
             /**
              * taking commands from virtual CMD and processing them accordingly
              */
@@ -48,7 +49,8 @@ public class VirtualCMD {
                 System.out.println(listDirectories());
                 break;
             case "find":
-                String findData = findDirectory(currentDir, command.replace("find ", ""));
+                String findData = findDirectory(currentDir,
+                        command.replace("find ", ""));
                 if ("".equals(findData)) {
                     System.out.println("Directory not found!");
                 } else {
@@ -56,6 +58,7 @@ public class VirtualCMD {
                 }
                 break;
             case "tree":
+                System.out.println(getTree(currentDir, ""));
                 break;
             case "exit":
                 scan.close();
@@ -65,7 +68,7 @@ public class VirtualCMD {
             }
         }
     }
-    
+
     public static String getFullPath(Directory dir) {
         String prompt = dir.getName();
         while (dir.getParent() != null) {
@@ -107,21 +110,41 @@ public class VirtualCMD {
                 + " folder(s)";
         return details;
     }
-    
+
     public static String findDirectory(Directory curDir, String name) {
         String findResult = "";
         if (name.equals(curDir.getName())) {
             findResult += getFullPath(curDir) + "\n";
         }
-        
+
         for (Directory dir : curDir.getListOfSubDirectories()) {
-            findResult += findDirectory(dir,name);
+            findResult += findDirectory(dir, name);
         }
         return findResult;
     }
-    
-    public static String getTree(Directory curDir, String name) {
-        return "hii";
+
+    public static String getTree(Directory curDir, String result) {
+        if (curDir == currentDir) {
+            result += ".\n";
+        } else {
+            result += curDir.getName() + "\n";
+        }
+        
+        for ( int i = 0; i < curDir.getListOfSubDirectories().size(); i++) {
+            Directory dir = curDir.getListOfSubDirectories().get(i);
+            if (dir.getParent() != currentDir) {
+                result += "   ";
+            }
+            
+            if (i != curDir.getListOfSubDirectories().size() - 1) {
+                result += "\u251c\u2500\u2500";
+            } else {
+                result += "\u2514\u2500\u2500";
+            }
+            
+            result = getTree(dir, result);
+        }
+        return result;
     }
 }
 
