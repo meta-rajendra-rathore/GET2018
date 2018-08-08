@@ -10,16 +10,31 @@ public class ImplementPriorityQueueTest {
 
     @Before
     public void init() {
-        queue = new ImplementPriorityQueue(new int[] { 4, 5, 2, 9, 1 });
+        queue = new ImplementPriorityQueue(5);
+        queue.addProcess(4);
+        queue.addProcess(5);
+        queue.addProcess(2);
+        queue.addProcess(9);
+        queue.addProcess(1);
     }
 
     @Test
-    public void test() {
+    public void testRemoval() {
+        assertEquals(9, queue.removeProcess());
         assertEquals(5, queue.removeProcess());
-        assertEquals(3, queue.removeProcess());
-        assertEquals(1, queue.removeProcess());
-        assertEquals(2, queue.removeProcess());
         assertEquals(4, queue.removeProcess());
+        assertEquals(2, queue.removeProcess());
+        assertEquals(1, queue.removeProcess());
+    }
+
+    @Test
+    public void testRemovalBeyondLimit() {
+        assertEquals(9, queue.removeProcess());
+        assertEquals(5, queue.removeProcess());
+        assertEquals(4, queue.removeProcess());
+        assertEquals(2, queue.removeProcess());
+        assertEquals(1, queue.removeProcess());
+        assertEquals(-1, queue.removeProcess());
     }
 
 }

@@ -1,5 +1,5 @@
 /**
- * 
+ * This class implement the functionality of virtual command prompt
  * @author Rajendra Singh Rathore
  */
 
@@ -67,6 +67,11 @@ public class VirtualCMD {
         }
     }
 
+    /**
+     * Get the full path of the given directory 
+     * @param dir
+     * @return path of the given dir
+     */
     public static String getFullPath(Directory dir) {
         String prompt = dir.getName();
         while (dir.getParent() != null) {
@@ -76,11 +81,21 @@ public class VirtualCMD {
         return (prompt);
     }
 
+    /**
+     * Make a new directory with given name in the given parent directory
+     * @param name
+     * @param parent
+     */
     public static void makeDirectory(String name, Directory parent) {
         Directory newDir = new Directory(name, parent);
         parent.addItem(newDir);
     }
 
+    /**
+     * Change current directory to given directory
+     * @param name
+     * @return true if directory changed successfully and false otherwise
+     */
     public static boolean changeDirectory(String name) {
         for (Directory dir : currentDir.getListOfSubDirectories()) {
             if (name.equals(dir.getName())) {
@@ -91,6 +106,10 @@ public class VirtualCMD {
         return false;
     }
 
+    /**
+     * Go to the parent directory
+     * @return true if successful and false if already on root and cant go any back
+     */
     public static boolean backDir() {
         if (currentDir.getParent() != null) {
             currentDir = currentDir.getParent();
@@ -99,6 +118,9 @@ public class VirtualCMD {
         return false;
     }
 
+    /**
+     * list all the sub directories of current directory
+     */
     public static String listDirectories() {
         String details = "";
         for (Directory dir : currentDir.getListOfSubDirectories()) {
