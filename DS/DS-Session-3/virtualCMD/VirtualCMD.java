@@ -14,6 +14,7 @@ public class VirtualCMD {
     public static void main(String[] args) {
         System.out
                 .println(": : : : Welcome to Metacube Virtual Command Prompt : : : :\n");
+        
         String command;
 
         root = new Directory("R:", null);
@@ -28,7 +29,7 @@ public class VirtualCMD {
             /**
              * taking commands from virtual CMD and processing them accordingly
              */
-            switch (command.split(" ")[0]) {
+            switch (command.split(" ")[0]) { 
             case "mkdir":
                 makeDirectory(command.replace("mkdir ", ""), currentDir);
                 break;
@@ -51,11 +52,11 @@ public class VirtualCMD {
                 if ("".equals(findData)) {
                     System.out.println("Directory not found!");
                 } else {
-                    System.out.println(findData.replaceAll("R:", "."));
+                    System.out.println(findData);
                 }
                 break;
             case "tree":
-                System.out.println(getTree(currentDir, ""));
+                System.out.println(getTree(currentDir, "", 0));
                 break;
             case "exit":
                 scan.close();
@@ -112,6 +113,9 @@ public class VirtualCMD {
         String findResult = "";
         if (name.equals(curDir.getName())) {
             findResult += getFullPath(curDir) + "\n";
+            if (curDir == currentDir) {
+                findResult = findResult.replace(curDir.getName(), ".");
+            }
         }
 
         for (Directory dir : curDir.getListOfSubDirectories()) {
@@ -120,7 +124,7 @@ public class VirtualCMD {
         return findResult;
     }
 
-    public static String getTree(Directory curDir, String result) {
+    public static String getTree(Directory curDir, String result, int level) {
         if (curDir == currentDir) {
             result += ".\n";
         } else {
@@ -129,7 +133,7 @@ public class VirtualCMD {
         
         for ( int i = 0; i < curDir.getListOfSubDirectories().size(); i++) {
             Directory dir = curDir.getListOfSubDirectories().get(i);
-            if (dir.getParent() != currentDir) {
+            for (int lvl = level; lvl > 0; lvl--) {
                 result += "   ";
             }
             
@@ -139,7 +143,7 @@ public class VirtualCMD {
                 result += "\u2514\u2500\u2500";
             }
             
-            result = getTree(dir, result);
+            result = getTree(dir, result, level+1);
         }
         return result;
     }
