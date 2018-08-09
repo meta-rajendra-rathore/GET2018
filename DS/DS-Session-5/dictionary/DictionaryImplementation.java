@@ -43,7 +43,17 @@ public class DictionaryImplementation implements Dictionary {
 
         JSONObject wordsList = (JSONObject) jsonObj.get("DictionaryData");
         dictionary.putAll((Map<? extends String, ? extends String>) wordsList);
-
+        
+        /**
+         * This below code fetch items one by one from JSON file 
+         * and add them to dictionary
+         */
+        /*Set<String> set = wordsList.keySet();
+        Iterator<String> iterator = set.iterator();
+        while (iterator.hasNext()) {
+            String currentKey = iterator.next();
+            addItem(currentKey, wordsList.get(currentKey)+"");
+        }*/
     }
 
     /**
