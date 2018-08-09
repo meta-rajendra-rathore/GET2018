@@ -4,53 +4,29 @@ import inheritance_composition.implementation.Category;
 import inheritance_composition.implementation.TypeOfAnimal;
 
 public class Animal {
-    String name, sound;
+    String id, name, sound;
     int age;
     TypeOfAnimal type;
     Category category;
 
-    public Animal(String name, int age, String sound) {
+    public Animal(String name, int age, String sound, TypeOfAnimal type, Category category) {
         this.name = name;
         this.sound = sound;
-        setAge(age);
+        this.age = age;
+        this.type = type;
+        this.category = category;
+    }
 
-        switch (this.getClass().getSuperclass().getSimpleName()) {
-	        case "Mammal":
-	            category = Category.Mammal;
-	            break;
-	            
-	        case "Bird":
-	            category = Category.Bird;
-	            break;
-	            
-	        case "Reptile":
-	            category = Category.Reptile;
-	            break;
-	            
-	        default:
-	            throw new AssertionError("No such animal category exists!");
-        }
-
-        switch (this.getClass().getSimpleName()) {
-        case "Tiger":
-            type = TypeOfAnimal.Tiger;
-            break;
-        case "Peacock":
-            type = TypeOfAnimal.Peacock;
-            break;
-        case "Crocodile":
-            type = TypeOfAnimal.Crocodile;
-            break;
-        case "Lizard":
-            type = TypeOfAnimal.Lizard;
-            break;
-        default:
-            throw new AssertionError("No such animal exists!");
-        }
+    public void setId(String id) {
+        this.id = id;
     }
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getId() {
+        return id;
     }
 
     public String getName() {
@@ -72,14 +48,10 @@ public class Animal {
     public int getAge() {
         return age;
     }
-    
+
     public String getInfo() {
-        return "\nDetails of the animal : " +
-                "\nName      : " + getName() +
-                "\nAge       : " + getAge() +  " Years" +
-                "\nCategory  : " + getCategory() +
-                "\nType      : " + getType() + 
-                "\nSound     : " + getSound();
+        return "\nDetails of the animal : " + "\nID        : " + "\nName      : " + getName() + "\nAge       : " + getAge() + " Years"
+                + "\nCategory  : " + getCategory() + "\nType      : " + getType() + "\nSound     : " + getSound();
     }
 
 }
