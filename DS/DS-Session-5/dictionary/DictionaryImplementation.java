@@ -45,9 +45,17 @@ public class DictionaryImplementation implements Dictionary {
         dictionary.putAll((Map<? extends String, ? extends String>) wordsList);
         
         /**
-         * This below code fetch items one by one from JSON file 
+         * This below two code fetch items one by one from JSON file 
          * and add them to dictionary
          */
+        
+        /*Set<Entry<String, String>> set = wordsList.entrySet();
+        Iterator<Entry<String, String>> iterator = set.iterator();
+        while (iterator.hasNext()) {
+            Map.Entry<String, String> currentKey = iterator.next(); 
+            addItem(currentKey.getKey(), currentKey.getValue());
+        }*/
+        
         /*Set<String> set = wordsList.keySet();
         Iterator<String> iterator = set.iterator();
         while (iterator.hasNext()) {
@@ -58,6 +66,9 @@ public class DictionaryImplementation implements Dictionary {
 
     /**
      * Add new word and its meaning to the dictionary
+     * @param word
+     * @param meaning
+     * @return true if item added successfully and false otherwise
      */
     @Override
     public boolean addItem(String word, String meaning) {
@@ -84,6 +95,8 @@ public class DictionaryImplementation implements Dictionary {
 
     /**
      * get the meaning of the given word
+     * @param word whose meaning is required
+     * @return meaning of the word
      */
     @Override
     public String getMeaning(String word) {
@@ -103,23 +116,19 @@ public class DictionaryImplementation implements Dictionary {
 
     /**
      * return the sorted list between the two given keys
+     * @param key1
+     * @param key2
+     * @return sorted list in range
      */
     @Override
     public Map<String, String> sortedListOfKeysBetweenTwoKeys(String key1, String key2) {
         Map<String, String> sortedListInRange = new HashMap<String, String>();
-        Set<String> listOfRequiredKeys = dictionary.keySet();
+        Set<String> listOfRequiredKeys = dictionary.keySet(); // extract keys from the dictionary and save in set
         Iterator<String> iterator = listOfRequiredKeys.iterator();
-        Boolean keyIsElligible = false;
         while (iterator.hasNext()) {
             String currentKey = iterator.next();
-            if (key1.equals(currentKey)) {
-                keyIsElligible = true;
-            } 
-            if (keyIsElligible) {
-                sortedListInRange.put(currentKey, dictionary.get(currentKey));
-            }
-            if (key2.equals(currentKey)) {
-                keyIsElligible = false;
+            if (key1.compareTo(currentKey) <= 0 && key2.compareTo(currentKey) >= 0) {
+                sortedListInRange.put(currentKey, dictionary.get(currentKey)); // add elligible key value pair to sortedList
             }
         }
         return sortedListInRange;
