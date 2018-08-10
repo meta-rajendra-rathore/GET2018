@@ -2,50 +2,63 @@ package datastructure_5.dictionary;
 
 import static org.junit.Assert.*;
 
-import java.io.FileNotFoundException;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.Before;
 import org.junit.Rule;
 import org.junit.Test;
-import org.junit.rules.ExpectedException;
 
 public class DictionaryTest {
     DictionaryImplementation dictionary;
     
     @Before
-    public void initWithValidFile() {
+    public void init_WhenFileIsValid() {
         dictionary = new DictionaryImplementation();
         dictionary.readEntriesFromFile("dictionary.json");
     }
-
-    @Test
-    public void test() {
-        assertEquals("Emperor, ruler", dictionary.getMeaning("King"));
-    }
     
-    @Rule
-    public ExpectedException ex = ExpectedException.none();
-
     @Test
-    public void addItemTest() {
+    public void addItem_whenKeyValuesAreValid() {
         // Adding Word and its Meaning to Dictionary
         assertTrue(dictionary.addItem("Dog", "Type of Animal"));
     }
-
+    
     @Test
-    public void deleteItemTest() {
+    public void getMeaning_whenWordDoesNotExist() {
+        assertNotEquals("A small mammal type animal", dictionary.getMeaning("Rabbit"));
+    }
+
+    @Test 
+    public void getMeaning_whenWordExists_thenGetMeaning() {
+        assertEquals("Emperor, ruler", dictionary.getMeaning("King"));
+    }
+    
+    @Test
+    public void deleteItem_whenWordExists() {
         // Deleting Word Attitude from Dictionary
         dictionary.addItem("Dog", "Type of Animal");
         assertTrue(dictionary.deleteItem("Dog"));
     }
+    
+    @Test
+    public void deleteItem_whenWordDoesNotExist() {
+        assertFalse(dictionary.deleteItem("Attitude"));
+    }
+    
+    @Test
+    public void addItemWithNull() throws FileNotFoundException {
+        assertFalse(dictionary.addItem(null, "A furniture"));
+    }
 
     @Test
-    public void getMeaningTest() {
-        // Getting Meaning of word Attitude
-        assertEquals("A small mammal type animal",
-                dictionary.getMeaning("Mouse"));
+    public void deleteItemWithNullKey() throws FileNotFoundException {
+        assertFalse(dictionary.deleteItem(null));
+    }
+
+    @Test
+    public void getMeaningWithNullKey() throws FileNotFoundException {
+        assertFalse(dictionary.getMeaning(null));
     }
 
     @Test
@@ -76,29 +89,5 @@ public class DictionaryTest {
                 "A small mammal type animal");
         assertEquals(sortedWords,
                 dictionary.sortedListOfKeysBetweenTwoKeys("Chair", "Mouse"));
-    }
-
-    @Test
-    public void addItemWithNull() throws FileNotFoundException {
-        // Adding a null word
-        ex.expect(NullPointerException.class);
-        ex.expectMessage("Key or Value to be Added can't be Null");
-        dictionary.addItem(null, "Input");
-    }
-
-    @Test
-    public void deleteItemWithNullKey() throws FileNotFoundException {
-        // Deleting a Null Word
-        ex.expect(NullPointerException.class);
-        ex.expectMessage("Key to be Deleted can't be Null");
-        dictionary.deleteItem(null);
-    }
-
-    @Test
-    public void getMeaningWithNullKey() throws FileNotFoundException {
-        // Getting a Null Word meaning
-        ex.expect(NullPointerException.class);
-        ex.expectMessage("Key to get Value can't be Null");
-        dictionary.getMeaning(null);
     }
 }
