@@ -72,8 +72,12 @@ public class DictionaryImplementation implements Dictionary {
      */
     @Override
     public boolean addItem(String word, String meaning) {
-        if (word == null || meaning == null || dictionary.containsKey(word)) {
-            throw new NullPointerException("Key or Value to be Added can't be Null");
+        if (word == null || meaning == null )) {
+            System.out.println("Key or Value to be Added can't be Null");
+            return false;
+        } else if (dictionary.containsKey(word)) {
+            System.out.println("The word already exists in the dictionary");
+            return false;
         } else {
             dictionary.put(word, meaning);
             return true;
@@ -85,8 +89,12 @@ public class DictionaryImplementation implements Dictionary {
      */
     @Override
     public boolean deleteItem(String word) {
-        if (word == null || !dictionary.containsKey(word)) {
-            throw new NullPointerException("Key to be Deleted can't be Null");
+        if (word == null )) {
+            System.out.println("Key to be deleted can't be Null");
+            return false;
+        } else if (!dictionary.containsKey(word)) {
+            System.out.println("The word doesn't exist in the dictionary");
+            return false;
         } else {
             dictionary.remove(word);
             return true;
@@ -101,8 +109,12 @@ public class DictionaryImplementation implements Dictionary {
     @Override
     public String getMeaning(String word) {
         if (word == null) {
-            throw new NullPointerException("Key to get Value can't be Null");
-        }
+            System.out.println("Key to get Value can't be Null");
+            return "";
+        } else if (!dictionary.containsKey(word)) {
+            System.out.println("The word doesn't exist in the dictionary");
+            return "";
+        } 
         return dictionary.get(word);
     }
 
