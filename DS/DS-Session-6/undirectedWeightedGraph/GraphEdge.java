@@ -30,4 +30,8 @@ public class GraphEdge {
     public int getWeight() {
         return weight;
     }
+    
+    public String toString() {
+        return "\n" + node1 + " <---> " + node2 + " : Weight = " + weight + "\n";
+    }
 }
