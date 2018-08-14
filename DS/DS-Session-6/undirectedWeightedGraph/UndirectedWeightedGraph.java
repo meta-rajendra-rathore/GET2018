@@ -10,6 +10,6 @@ public interface UndirectedWeightedGraph<T> {
 
     public List<GraphEdge> mst();
 
-    public int shotestPath(int a, int b); 
+    public int shortestPath(int a, int b); 
 
 }
