@@ -79,7 +79,7 @@ CREATE TABLE Orders(
     PRIMARY KEY (ID),
     FOREIGN KEY (user_ID)
         REFERENCES User (ID),
-    FOREIGN KEY (shipping_address)
+    FOREIGN KEY (shipping_address_ID)
         REFERENCES Address (ID)
 );
 
