@@ -1,0 +1,6 @@
+Side2, 2, www.mystorage.come/project1/product2/Side1
+Behind, 2, www.mystorage.come/project1/product2/Behind
+Front, 3, www.mystorage.come/project1/product3/Front
+Side1, 3, www.mystorage.come/project1/product3/Side1
+Side2, 3, www.mystorage.come/project1/product3/Side2
+Behind, 3, www.mystorage.come/project1/product3/Behind

@@ -1,0 +1,5 @@
+USE storefront;
+SHOW TABLES;
+DROP TABLE Image;
+DROP TABLE Product;
+SHOW TABLES;

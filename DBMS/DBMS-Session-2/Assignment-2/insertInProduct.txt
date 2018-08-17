@@ -1,0 +1,2 @@
+HP i5 Laptop, 8, intel i5 powered laptop that can take on anything, 42999, 9, 1
+HP i3 Laptop, 6, intel i3 powered laptop that can take on anything, 42999, 9, 0
