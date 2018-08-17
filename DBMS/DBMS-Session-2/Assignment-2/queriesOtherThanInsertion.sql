@@ -8,7 +8,9 @@ SELECT
 FROM
     Product
         INNER JOIN
-    Category ON Product.category_ID = Category.ID
+    Category_of_product ON Product.ID = Category_of_product.product_ID
+		INNER JOIN
+	Category ON Category.ID = Category_of_product.category_ID
 WHERE
     is_enable = 1
 ORDER BY modify_time DESC;
@@ -63,7 +65,9 @@ SELECT
 FROM
     Product
         INNER JOIN
-    Category ON Product.category_ID = Category.ID
+    Category_of_product ON Product.ID = Category_of_product.product_ID
+		INNER JOIN
+	Category ON Category.ID = Category_of_product.category_ID
 WHERE
     Category.name = 'Mobiles';
 
@@ -79,7 +83,7 @@ WHERE
 # 7 : Increase the Inventory of all the products by 100.
 
 UPDATE Product
-SET stock_quantity = stock_quantity + 50
+SET stock_quantity = stock_quantity + 100
 WHERE NOT ID = -1;
 SELECT 
     *

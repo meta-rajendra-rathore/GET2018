@@ -1,2 +1,25 @@
-HP i5 Laptop, 8, intel i5 powered laptop that can take on anything, 42999, 9, 1
-HP i3 Laptop, 6, intel i3 powered laptop that can take on anything, 42999, 9, 0
+HP i5 Laptop, Intel i5 powered laptop that can take on anything, 42999, 9, 1
+HP i3 Laptop, Intel i3 powered laptop that can take on anything, 42999, 9, 0
+SneakersShoes, Flat Sole- Shimmering, 2000, 500, 1
+FlatsSlippers, 1 year warranty- Daily wear, 50, 10, 1
+LevisJeans, Blue Color- Denim, 2000, 30, 0
+WoodlandJeans, Black color- Ankle, 4000, 200, 1
+AdidasShirt, White color- Round neck, 100, 3000, 1
+ReebokShirt, Black color- Party wear, 1500, 20, 1
+SilkSaree, Beautiful- Red color- Limited stock, 5000, 150, 0
+CheffonSaree, Green color-Party wear- Light weight, 7000, 40, 0
+CottonSaree, Free length-Blue color, 200, 10, 0
+PeopleTop, Purple color-Off shoulder, 2500, 30, 1
+MaxTop, Black color-Striped, 1500, 120, 1
+AnarkaliKurti, Floor length, 2000, 600, 0
+ShortKurtis, Parrot green color, 130, 10, 1
+LittleJackets, Woolen- Red black color, 500, 1100, 1
+JiniJackets, Half sleeves-comfortable-woolen, 3000, 70, 0     
+GirlsDress, Beautiful-Dress-pink color, 2000, 200, 1
+BoysDress, Smart shirt and pant pair-Tie, 150, 10, 1
+LenovoLaptop, 15Inch display-Black, 47000, 1700, 0
+DellLaptop, I7 processor- Graphic card, 70000, 20, 0
+SamsungLaptop, Red color-8GB RAM, 50000, 40, 1
+SkirtDress, Small skirt for kids-top, 650, 70, 1
+LenovoMobile, Slim-Light weight-Rose gold color, 1700, 220, 1
+MIMobile, 40 MP front camera-4GB RAM, 25000, 410, 0

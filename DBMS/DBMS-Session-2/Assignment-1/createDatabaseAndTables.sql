@@ -1,4 +1,5 @@
 SHOW DATABASES;
+DROP DATABASE STOREFRONT;
 CREATE DATABASE storefront;
 SHOW DATABASES;
 USE Storefront;
@@ -31,7 +32,7 @@ CREATE TABLE Address(
 
 CREATE TABLE Category(
     ID INT NOT NULL AUTO_INCREMENT,
-    name VARCHAR(20) NOT NULL,
+    name VARCHAR(20) NOT NULL UNIQUE,
     parent_category_ID INT,
     PRIMARY KEY (ID)
 );
@@ -39,15 +40,12 @@ CREATE TABLE Category(
 CREATE TABLE Product(
     ID INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(30),
-    category_ID INT,
     product_description VARCHAR(200),
     price INT,
     stock_quantity INT,
     is_enable BOOLEAN DEFAULT TRUE,
     modify_time TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
-    PRIMARY KEY (ID),
-    FOREIGN KEY (Category_ID)
-        REFERENCES Category (ID)
+    PRIMARY KEY (ID)
 );
 
 CREATE TABLE Category_of_product(
@@ -71,7 +69,7 @@ CREATE TABLE Image(
 );
 
 CREATE TABLE Orders(
-    ID INT NOT NULL,
+    ID INT NOT NULL AUTO_INCREMENT,
     user_ID INT,
     order_date DATE,
     order_amount INT,
@@ -85,15 +83,12 @@ CREATE TABLE Orders(
 
 CREATE TABLE Products_In_Order(
     order_ID INT,
-    user_ID INT,
     product_ID INT,
     product_quantity INT,
     order_status VARCHAR(12),
     PRIMARY KEY (Order_ID,product_ID),
     FOREIGN KEY (order_ID)
         REFERENCES Orders (ID),
-    FOREIGN KEY (user_ID)
-        REFERENCES User (ID),
     FOREIGN KEY (product_ID)
         REFERENCES Product (ID)
 );

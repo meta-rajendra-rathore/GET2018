@@ -9,3 +9,12 @@ Plazo, 5
 Top Wear, 5
 Tunic, 11
 Washing machine, 1
+Footwear, 4
+Sneakers, 14
+Slippers, 14
+Shirt, 4
+Saree, 5
+Tops, 11
+Kurti, 11
+Jacket, 4
+Dress, 5
