@@ -2,14 +2,13 @@ package storefront_jdbc.pojos;
 
 /**
  * @author Rajendra Singh Rathore
- *
+ * This bean class wraps the data to/from Image table
  */
 public class Image {
     private int id, product_ID;
     private String name, image_URL;
     
-    public Image(int id, int product_ID, String name, String image_URL) {
-        this.id = id;
+    public Image(int product_ID, String name, String image_URL) {
         this.product_ID = product_ID;
         this.name = name;
         this.image_URL = image_URL;
@@ -73,6 +72,6 @@ public class Image {
 
     @Override
     public String toString() {
-        return "Image [id=" + id + ", product_ID=" + product_ID + ", name=" + name + ", image_URL=" + image_URL + "]\n";
+        return "Image : \nImage ID = " + id + "\nProduct ID = " + product_ID + "\nName = " + name + "\nImage URL=" + image_URL + "\n";
     }
 }

@@ -2,7 +2,7 @@ package storefront_jdbc.pojos;
 
 /**
  * @author Rajendra Singh Rathore
- *
+ * This bean class wraps the data to/from Category table
  */
 public class TopCategories {
     private String name;
@@ -43,6 +43,6 @@ public class TopCategories {
 
     @Override
     public String toString() {
-        return "TopCategories [name=" + name + ", noOfSubCategories=" + noOfSubCategories + "]\n";
+        return "TopCategories :\nName = " + name + "\nNo Of SubCategories = " + noOfSubCategories + "\n";
     }
 }

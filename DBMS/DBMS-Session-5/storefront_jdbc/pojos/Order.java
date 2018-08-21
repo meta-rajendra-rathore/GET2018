@@ -4,7 +4,7 @@ import java.sql.Date;
 
 /**
  * @author Rajendra Singh Rathore
- * Id, Order Date, Order Total
+ * This bean class wraps the data to/from Orders table
  */
 public class Order {
     private int id;
@@ -61,6 +61,6 @@ public class Order {
 
     @Override
     public String toString() {
-        return "Order [id=" + id + ", orderDate=" + orderDate + ", orderAmount=" + orderAmount + "]\n";
+        return "Order :\nOrder ID = " + id + "\nOrder Date = " + orderDate + "\nOrder Amount = " + orderAmount + "\n";
     }
 }
