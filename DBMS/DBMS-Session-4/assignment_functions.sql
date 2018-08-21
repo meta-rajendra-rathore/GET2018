@@ -16,7 +16,7 @@ SELECT MONTHNAME(STR_TO_DATE(8, '%m')) AS Month, count_orders_in_month( 8 , 2017
 
 # 2 : Create a function to return month in a year having maximum orders. Year will be input parameter.
 
-DELIMITER ^^
+DELIMITER $$
 CREATE FUNCTION month_with_max_order ( query_year INT) RETURNS VARCHAR(10)
 DETERMINISTIC 
 BEGIN
@@ -29,6 +29,6 @@ BEGIN
         GROUP BY MONTH(order_date) 
     ) orders_in_month;
     RETURN MONTHNAME(STR_TO_DATE(max_order_month, '%m'));
-END ^^
+END $$
 
 SELECT month_with_max_order(2018) AS 'Month with max orders in 2018';

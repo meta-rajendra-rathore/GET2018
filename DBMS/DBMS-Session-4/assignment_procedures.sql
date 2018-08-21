@@ -43,14 +43,14 @@ BEGIN
         Orders.order_date AS 'Order date',
         Products_In_Order.order_status AS 'Order status'
     FROM Orders
-    LEFT JOIN
+    RIGHT JOIN
     Products_In_Order
     ON Orders.ID = Products_In_Order.order_ID
     LEFT JOIN
     Product
     ON Products_In_Order.product_ID = Product.ID
     WHERE order_date 
-        BETWEEN IF(start_date >= end_date, DATE_FORMAT(start_date, "%Y-%m-01"), start_date) 
+        BETWEEN IF(start_date >= end_date, DATE_FORMAT(end_date, "%Y-%m-01"), start_date) 
         AND end_date
     ORDER BY order_date;
 END ^^
@@ -59,4 +59,4 @@ CALL order_details_in_period( STR_TO_DATE("2018-08-05", "%Y-%m-%d"),STR_TO_DATE(
 
 CALL order_details_in_period( STR_TO_DATE("2018-08-15", "%Y-%m-%d"),STR_TO_DATE("2018-08-09", "%Y-%m-%d") );
 
-CALL order_details_in_period( STR_TO_DATE("2018-08-07", "%Y-%m-%d"),STR_TO_DATE("2018-08-7", "%Y-%m-%d") );
+CALL order_details_in_period( STR_TO_DATE("2018-08-01", "%Y-%m-%d"),STR_TO_DATE("2017-08-9", "%Y-%m-%d") );
