@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions targetNamespace="http://areaservice.com" xmlns:apachesoap="http://xml.apache.org/xml-soap" xmlns:impl="http://areaservice.com" xmlns:intf="http://areaservice.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsdlsoap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<!--WSDL created by Apache Axis version: 1.4
+Built on Apr 22, 2006 (06:55:48 PDT)-->
+ <wsdl:types>
+  <schema elementFormDefault="qualified" targetNamespace="http://areaservice.com" xmlns="http://www.w3.org/2001/XMLSchema">
+   <element name="getAreaOfTriangle">
+    <complexType>
+     <sequence>
+      <element name="side1" type="xsd:double"/>
+      <element name="side2" type="xsd:double"/>
+      <element name="side3" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+   <element name="getAreaOfTriangleResponse">
+    <complexType>
+     <sequence>
+      <element name="getAreaOfTriangleReturn" type="xsd:double"/>
+     </sequence>
+    </complexType>
+   </element>
+  </schema>
+ </wsdl:types>
+
+   <wsdl:message name="getAreaOfTriangleRequest">
+
+      <wsdl:part element="impl:getAreaOfTriangle" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:message name="getAreaOfTriangleResponse">
+
+      <wsdl:part element="impl:getAreaOfTriangleResponse" name="parameters">
+
+      </wsdl:part>
+
+   </wsdl:message>
+
+   <wsdl:portType name="AreaOfTriangle">
+
+      <wsdl:operation name="getAreaOfTriangle">
+
+         <wsdl:input message="impl:getAreaOfTriangleRequest" name="getAreaOfTriangleRequest">
+
+       </wsdl:input>
+
+         <wsdl:output message="impl:getAreaOfTriangleResponse" name="getAreaOfTriangleResponse">
+
+       </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:portType>
+
+   <wsdl:binding name="AreaOfTriangleSoapBinding" type="impl:AreaOfTriangle">
+
+      <wsdlsoap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+
+      <wsdl:operation name="getAreaOfTriangle">
+
+         <wsdlsoap:operation soapAction=""/>
+
+         <wsdl:input name="getAreaOfTriangleRequest">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:input>
+
+         <wsdl:output name="getAreaOfTriangleResponse">
+
+            <wsdlsoap:body use="literal"/>
+
+         </wsdl:output>
+
+      </wsdl:operation>
+
+   </wsdl:binding>
+
+   <wsdl:service name="AreaOfTriangleService">
+
+      <wsdl:port binding="impl:AreaOfTriangleSoapBinding" name="AreaOfTriangle">
+
+         <wsdlsoap:address location="http://localhost:8080/AreaWebServices/services/AreaOfTriangle"/>
+
+      </wsdl:port>
+
+   </wsdl:service>
+
+</wsdl:definitions>
