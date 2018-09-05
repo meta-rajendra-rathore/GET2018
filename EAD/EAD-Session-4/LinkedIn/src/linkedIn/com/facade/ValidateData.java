@@ -22,7 +22,7 @@ public class ValidateData {
 				return Status.DUPLICATE;
 			}
 		}
-		Status status = MyUserDaoMySQL.getInstance().addEmployee(user);
+		Status status = MyUserDaoMySQL.getInstance().addUser(user);
 		return status; 
 	}
 	

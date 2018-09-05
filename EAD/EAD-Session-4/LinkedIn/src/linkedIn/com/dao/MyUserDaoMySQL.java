@@ -10,6 +10,7 @@ import java.util.List;
 
 import linkedIn.com.enums.Status;
 import linkedIn.com.util.Utilities;
+import linkedIn.com.model.dto.FriendDto;
 import linkedIn.com.model.dto.UserDto;
 import linkedIn.com.model.dto.UserEmail;
 import linkedIn.com.model.pojo.MyUser;
@@ -32,35 +33,49 @@ public class MyUserDaoMySQL implements MyUserDao {
 	}
 
 	@Override
-	public Status addEmployee(MyUser employee) {
+	public Status addUser(MyUser user) {
 		try {
 			PreparedStatement stmt = connection.prepareStatement(Utilities.INSERT_USER);
-			stmt.setString(1, employee.getFirstName());
-			stmt.setString(2, employee.getLastName());
-			stmt.setString(3, employee.getEmail());
-			stmt.setString(4, employee.getDob());
-			stmt.setString(5, employee.getPassword());
-			stmt.setString(6, employee.getContact());
-			stmt.setString(7, employee.getOrganisation());
+			stmt.setString(1, user.getFirstName());
+			stmt.setString(2, user.getLastName());
+			stmt.setString(3, user.getEmail());
+			stmt.setString(4, user.getDob());
+			stmt.setString(5, user.getPassword());
+			stmt.setString(6, user.getContact());
+			stmt.setString(7, user.getOrganisation());
 			stmt.execute();
 			return Status.OK;
 		} catch (SQLIntegrityConstraintViolationException e) {
 			return Status.DUPLICATE;
 		}catch (SQLException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		return Status.FAILURE;
 	}
 
 	@Override
-	public Status updateEmployee(int id, MyUser employee) {
-		// TODO Auto-generated method stub
-		return null;
+	public Status updateUser(int id, UserDto user) {
+		try {
+			PreparedStatement stmt = connection.prepareStatement(Utilities.UPDATE_USERS);
+			stmt.setString(1, user.getFirstName());
+			stmt.setString(2, user.getLastName());
+			stmt.setString(3, user.getDob());
+			stmt.setString(4, user.getContact());
+			stmt.setString(5, user.getOrganisation());
+			stmt.setInt(6, id);
+			int result = stmt.executeUpdate();
+			if (result >= 0) {
+				return Status.OK;
+			}
+		} catch (SQLException e) {
+			
+			e.printStackTrace();
+		}
+		return Status.FAILURE;
 	}
 
 	@Override
-	public UserDto searchEmployeeByEmail(String email) {
+	public UserDto searchUserByEmail(String email) {
 		System.out.println("here : " + email); 
 		UserDto user = null;
 		try {
@@ -94,30 +109,30 @@ public class MyUserDaoMySQL implements MyUserDao {
 				return Status.OK;
 			}
 		} catch (SQLException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		return Status.FAILURE;
 	}
 
-	/*@Override
-	public Status updateEmployee(int id, User employee) {
+	@Override
+	public List<FriendDto> getFriends(UserDto user) {
+		List<FriendDto> listOfFriends = new ArrayList<FriendDto>();
+		PreparedStatement stmt;
 		try {
-			PreparedStatement stmt = connection.prepareStatement(Utilities.UPDATE_EMPLOYEES);
-			stmt.setString(1, employee.getFirstName());
-			stmt.setString(2, employee.getLastName());
-			stmt.setString(3, employee.getEmail());
-			stmt.setInt(4, employee.getDob());
-			stmt.setInt(5, id);
-			int result = stmt.executeUpdate();
-			if (result >= 0) {
-				return Status.OK;
+			stmt = connection.prepareStatement(Utilities.GET_FRIENDS);
+			stmt.setString(1, user.getEmail());
+			stmt.setString(2, user.getOrganisation());
+			ResultSet rs = stmt.executeQuery();
+			while (rs.next()) {
+				FriendDto friend = new FriendDto(rs.getString("first_name"), rs.getString("last_name"), rs.getString("email"), rs.getString("contact"), rs.getString("image"));
+				listOfFriends.add(friend);
 			}
+			return listOfFriends;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-		return Status.FAILURE;
-	}*/
-
+		return null;
+	}
 }

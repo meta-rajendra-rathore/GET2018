@@ -17,14 +17,14 @@ import linkedIn.com.facade.ValidateData;
 /**
  * Servlet implementation class LoginUser
  */
-@WebServlet("/SigninUser")
-public class SigninUser extends HttpServlet {
+@WebServlet("/SignInServlet")
+public class SignInServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SigninUser() {
+    public SignInServlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -41,10 +41,13 @@ public class SigninUser extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("hii bro ");
 		PrintWriter out = response.getWriter();
 		String email = request.getParameter("email");
+		System.out.println("hii bro " + email);
 		String password = request.getParameter("signin_password");
 		Status status = ValidateData.checkUserExistence(email, password);
+		System.out.println(""+status);
 			
 		RequestDispatcher rd;
 		switch (status) {
@@ -63,9 +66,11 @@ public class SigninUser extends HttpServlet {
 	        }
 	        //generate a new session
 	        HttpSession newSession = request.getSession(true);
+	        newSession.setAttribute("email", email); 
 	
 	        //setting session to expiry in 5 mins
 	        newSession.setMaxInactiveInterval(5*60);
+	        
 			rd = request.getRequestDispatcher("ShowProfile");
 			rd.include(request, response);
 			break;

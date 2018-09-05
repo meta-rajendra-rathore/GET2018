@@ -17,7 +17,7 @@ import javax.servlet.http.HttpSession;
 /**
  * Servlet Filter implementation class AuthenticationFilter
  */
-@WebFilter("/AuthenticationFilter")
+@WebFilter(filterName = "AuthenticationFilter", urlPatterns = { "/ImageUpload", "/ShowProfile", "/ShowFriends", "/UpdateUser", "/UpdateUserIntoDatabase" }) 
 public class AuthenticationFilter implements Filter {
     private ServletContext context;
 
@@ -39,7 +39,6 @@ public class AuthenticationFilter implements Filter {
 	 * @see Filter#doFilter(ServletRequest, ServletResponse, FilterChain)
 	 */
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) throws IOException, ServletException {
-		System.out.println("filter doFilter ****************************************");
 		HttpServletRequest req = (HttpServletRequest) request;
 		HttpServletResponse res = (HttpServletResponse) response;
 
@@ -58,7 +57,6 @@ public class AuthenticationFilter implements Filter {
 	 * @see Filter#init(FilterConfig)
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
-		System.out.println("filter init ****************************************");
         this.context = fConfig.getServletContext();
         this.context.log("AuthenticationFilter initialized");
 	}

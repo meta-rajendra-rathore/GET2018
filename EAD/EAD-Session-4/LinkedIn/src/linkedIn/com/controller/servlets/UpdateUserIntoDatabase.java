@@ -12,20 +12,21 @@ import javax.servlet.http.HttpServletResponse;
 
 import linkedIn.com.enums.Status;
 import linkedIn.com.util.Utilities;
+import linkedIn.com.model.dto.UserDto;
 import linkedIn.com.model.pojo.MyUser;
 import linkedIn.com.dao.MyUserDaoMySQL;
 
 /**
- * Servlet implementation class UpdateEmployeeIntoDatabase
+ * Servlet implementation class UpdateuserloyeeIntoDatabase
  */
-@WebServlet("/UpdateEmployeeIntoDatabase")
-public class UpdateEmployeeIntoDatabase extends HttpServlet {
+@WebServlet("/UpdateUserIntoDatabase")
+public class UpdateUserIntoDatabase extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public UpdateEmployeeIntoDatabase() {
+    public UpdateUserIntoDatabase() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -34,17 +35,20 @@ public class UpdateEmployeeIntoDatabase extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		int id = Integer.parseInt(request.getParameter("updateEmp_id"));
-		String first_name = request.getParameter("updateEmp_first_name");
-		String last_name = request.getParameter("updateEmp_last_name");
-		String email = request.getParameter("updateEmp_email");
-		String dob = request.getParameter("updateEmp_age");
+		int id = Integer.parseInt(request.getParameter("updateUser_id"));
+		String first_name = request.getParameter("updateUser_first_name");
+		String last_name = request.getParameter("updateUser_last_name");
+		String email = request.getParameter("updateUser_email");
+		String dob = request.getParameter("updateUser_dob");
+		String contact = request.getParameter("updateUser_contact");
+		String organisation = request.getParameter("updateUser_org");
+		String image = "";
 		
-		MyUser emp = new MyUser(id, first_name, last_name, email, dob, email, email, email, email);
-		Status status = MyUserDaoMySQL.getInstance().updateEmployee(id, emp);
+		UserDto user = new UserDto(id, first_name, last_name, email, dob, contact, organisation, image);
+		Status status = MyUserDaoMySQL.getInstance().updateUser(id, user);
 		System.out.println("" + status);
 		
-		RequestDispatcher view = request.getRequestDispatcher("ShowAllEmployees");
+		RequestDispatcher view = request.getRequestDispatcher("ShowProfile");
 		view.forward(request, response);
 	}
 }
