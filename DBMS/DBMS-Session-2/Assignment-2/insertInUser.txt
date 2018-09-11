@@ -1,11 +1,11 @@
-Suresh, Suresh@gmail.com, 0, password123, 8765437646
-Kamlesh, Kamlesh@gmail.com, 0, pass123, 8765434567
-Seeta, Seeta@gmail.com, 1, password@345, 9836536737
-Jignesh, Jignesh@gmail.com, 0, password723, 9483737744
-Suresh, Sureshkumar@gmail.com, 0, passwod123, 9328285854
-John, John@gmail.com, 0, uberuber, 7737229293
-Calvin, Calvin@gmail.com, 0, passss123, 9076545784
-Mohammad, Mohammad@gmail.com, 0, password987, 6356798342
-Radha, Radha@gmail.com, 1, gyanbhothai, 8864367843
-Jai, Jai@gmail.com, 0, password123, 9123487622
-Bijju, Bijju@gmail.com, 0, passhoja, 6798633678
+Suresh, Suresh@gmail.com, 0, password123, 15-10-1997, 8765437646
+Kamlesh, Kamlesh@gmail.com, 0, pass123, 25-10-1997, 8765434567
+Seeta, Seeta@gmail.com, 1, password@345, 25-10-1997, 9836536737
+Jignesh, Jignesh@gmail.com, 0, password723, 25-10-1997, 9483737744
+Suresh, Sureshkumar@gmail.com, 0, passwod123, 05-10-1980, 9328285854
+John, John@gmail.com, 0, uberuber, 25-10-1997, 7737229293
+Calvin, Calvin@gmail.com, 0, passss123, 05-10-1997, 9076545784
+Mohammad, Mohammad@gmail.com, 0, password987, 25-10-1987, 6356798342
+Radha, Radha@gmail.com, 1, gyanbhothai, 25-12-1997, 8864367843
+Jai, Jai@gmail.com, 0, password123, 25-10-1997, 9123487622
+Bijju, Bijju@gmail.com, 0, passhoja, 25-10-1997, 6798633678

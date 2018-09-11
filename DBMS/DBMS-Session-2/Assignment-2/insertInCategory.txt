@@ -1,0 +1,11 @@
+Fashion
+Men Fashion, 3
+Women Fashion, 3
+Personal Care
+Body Wash, 6
+Laptop, 1
+Jeans, 4
+Plazo, 5
+Top Wear, 5
+Tunic, 11
+Washing machine, 1
