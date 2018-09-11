@@ -13,6 +13,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import linkedIn.com.enums.Status;
 import linkedIn.com.facade.ValidateData;
@@ -47,6 +48,7 @@ public class SignUpServlet extends HttpServlet {
 		String contact = request.getParameter("signup_contact");
 		String organisation = request.getParameter("signup_org");
 		String image = "";
+		System.out.println(firstName + " " + lastName + " " + email); 
 		
 		Status status = null;
 		
@@ -70,14 +72,26 @@ public class SignUpServlet extends HttpServlet {
 		}
 		
 		if (status == status.DUPLICATE || status == status.FAILURE) {
+			System.out.println("" + status); 
 			RequestDispatcher rd = request.getRequestDispatcher("signup.html");
 			rd.forward(request, response);
 			// Show an alert of duplicate email
-			PrintWriter out = response.getWriter();
+			/*PrintWriter out = response.getWriter();
 			out.println("<script type=\"text/javascript\">");
 			out.println("alert('User or password incorrect');");
-			out.println("</script>");
+			out.println("</script>");*/
 		} else {
+			HttpSession oldSession = request.getSession(false);
+	        if (oldSession != null) {
+	            oldSession.invalidate();
+	        }
+	        //generate a new session
+	        HttpSession newSession = request.getSession(true);
+	        newSession.setAttribute("email", email); 
+	
+	        //setting session to expiry in 5 mins
+	        newSession.setMaxInactiveInterval(5*60);
+	        
 			RequestDispatcher rd = request.getRequestDispatcher("ShowProfile");
 			rd.forward(request, response);
 		}

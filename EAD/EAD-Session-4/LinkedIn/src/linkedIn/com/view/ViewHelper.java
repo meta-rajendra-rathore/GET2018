@@ -41,4 +41,26 @@ public final class ViewHelper {
 			"Years</td> </tr>";
 	
 	public static String END_CONTENT = "</table> </body> </html>";
+	
+	/*
+  
+  <servlet>
+		<servlet-name>SignUpServlet</servlet-name>
+		<servlet-class>linkedIn.com.controller.servlets.SignUpServlet
+		</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SignUpServlet</servlet-name>
+		<url-pattern>/SignUpServlet</url-pattern>
+	</servlet-mapping>
+
+	<filter>
+	   <filter-name>UserDataValidationFilter</filter-name>
+	   <filter-class>linkedIn.com.controller.filters.UserDataValidationFilter</filter-class>
+	</filter>
+	
+	<filter-mapping>
+	   <filter-name>UserDataValidationFilter</filter-name>
+	   <url-pattern>/SignUpServlet</url-pattern>
+	</filter-mapping>*/
 }

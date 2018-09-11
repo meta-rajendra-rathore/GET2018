@@ -18,6 +18,8 @@ public final class Utilities {
 	public final static String SEARCH_USER_WITH_EMAIL;
 	public final static String UPDATE_USERS;
 	public final static String UPLOAD_IMAGE;
+	public final static String GET_FRIENDS;
+	public final static String USER_IMAGE_PATH;
 
 	static {
 
@@ -29,6 +31,7 @@ public final class Utilities {
 		SERVER_URL = "jdbc:mysql://localhost:3306/";
 		USER = "root";
 		PASSWORD = "rootpassword";
+		//PASSWORD = "0000";
 
 		// defining MYSQL queries for execution
 
@@ -42,7 +45,7 @@ public final class Utilities {
 				+ "password VARCHAR(20) NOT NULL, "
 				+ "contact VARCHAR(15), "
 				+ "organisation VARCHAR(30), "
-				+ "image VARCHAR(60) DEFAULT 'images/users/user.png', "
+				+ "image VARCHAR(200) DEFAULT 'images/users/user.png', "
 				+ "PRIMARY KEY (id));";
 
 		// 7 params
@@ -62,6 +65,11 @@ public final class Utilities {
 		UPDATE_USERS = "UPDATE UserTable SET first_name = ?, last_name = ?, dob = ?, contact = ?, organisation = ? where id = ?; ";
 		
 		UPLOAD_IMAGE = "UPDATE UserTable SET image = ? WHERE email = ?;";
+		
+		GET_FRIENDS = "SELECT first_name, last_name, email, contact, image FROM UserTable WHERE NOT email = ? AND organisation = ?";
+		
+		USER_IMAGE_PATH = "D:\\EclipseForWeb\\LinkedIn\\WebContent\\images\\users";
+		//USER_IMAGE_PATH = "D:\\rajen\\Documents\\EclipseForWeb\\LinkedIn\\WebContent\\images\\users";
 	}
 
 	public static String getUsername() {
