@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel='icon' href='images/html_logo.png'>
+		<title>MyProfile</title>
+		<link rel='stylesheet' href='styles/basicStyles.css'>
+	</head>
+	<body>
+		<!--This block contains the nav bar of the website-->
+		<table width=70% align='center' class='nav_bar'>
+			<tr>
+				<td align='left'>
+					<img src='images/html_logo.png' alt='HTML_LOGO' width=100px/>
+				</td>
+				<td width=100% align='right'>
+					<a href='home.html'>Home</a>
+					<a href='about.html'>About</a>
+					<a href='product.html'>Product</a>
+					<a href='gallery.html'>Gallery</a>
+					<a href='contact.html'>Contact</a>
+					<a href='home.html'>Logout</a>
+					<span> | </span>
+					<a href='profile.html'>Hi Rajendra</a>
+					<span>   </span>
+				</td>
+				<td align='right'>
+					<img src='images/user.jpg' alt='User Image' width=60px id='user_image' style='cursor: pointer'/>
+					<span id='spnFilePath'></span>
+					<input type='file' id='FileUpload' style='display: none' accept='image/*'/>
+					<script type='text/javascript'>
+						window.onload = function () {
+							var fileupload = document.getElementById('FileUpload');
+							var filePath = document.getElementById('spnFilePath');
+							var image = document.getElementById('user_image');
+							image.onclick = function () {
+								fileupload.click();
+							};
+							fileupload.onchange = function () {
+								var fileName = fileupload.value.split('\\')[fileupload.value.split('\\').length - 1];
+								filePath.innerHTML = '<b>Selected File: </b>' + filePath.value;
+							};
+						};
+					</script>
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<!--This block contains the nav bar of the website-->
+		
+		<br> <br>
+			
+		<div class='user_details'>
+			<h2 style='font-family: cursive; color: lavenderBlush;'>Hii! Rajendra. Your details are as below</h2>
+			<table align='center' cellpadding='5px' font-size='200px'>
+				<tr>
+					<td rowspan='2'><img src='images/user.jpg' alt='User Image' id='upload_image' width=80px border='1' border-color='indianred'/></td><br />
+					<td align='right' style='font-size:25px'>Rajendra Singh Rathore</td>
+				</tr>
+				<tr>
+					<td align='right'>rajendra@gmail.com</td>
+				</tr>
+				<tr>
+					<td>Date of birth : </td>
+					<td align='right'>18-12-1996</td>
+				</tr>
+				<tr>
+					<td>Contact number : </td>
+					<td align='right'>8005500558</td>
+				</tr>
+				<tr>
+					<td>Organization/Institute : </td>
+					<td align='right'>Metacube Pvt Ltd</td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align='right'><br><input type='button' onclick='UpdateEmployee' value=' Edit Profile ' id='button_new_user'></td>
+				</tr>
+			</table>
+		</div>
+
+	</body>
+</html>

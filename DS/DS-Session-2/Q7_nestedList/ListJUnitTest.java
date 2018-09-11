@@ -14,12 +14,16 @@ import org.junit.Test;
  *
  */
 public class ListJUnitTest {
-	
-ListOLists listOLists = new ListOLists();
-List<Object> list = new ArrayList<>();
+    ListOLists list;
     
-    @Before
-    public void init() {
+    public ListJUnitTest() {
+        
+        List<Object> inputList = new ArrayList<>();
+        
+        List<Object> listOuter1 = new ArrayList<>();
+        List<Object> listOuter2 = new ArrayList<>();
+        List<Object> listOuter3 = new ArrayList<>();
+        
         ArrayList<Integer> innerList11 = new ArrayList<Integer>(Arrays.asList(new Integer[] {1, 2, 3, 4}));
         ArrayList<Integer> innerList12 = new ArrayList<Integer>(Arrays.asList(new Integer[] {5, 6, 7, 8}));
         ArrayList<Integer> innerList21 = new ArrayList<Integer>(Arrays.asList(new Integer[] {9, 10, 11, 12}));
@@ -27,52 +31,65 @@ List<Object> list = new ArrayList<>();
         ArrayList<Integer> innerList31 = new ArrayList<Integer>(Arrays.asList(new Integer[] {17, 18, 19, 20}));
         ArrayList<Integer> innerList32 = new ArrayList<Integer>(Arrays.asList(new Integer[] {21, 22, 23, 24}));
         
-        listOLists.addCustomList(innerList11, innerList12, innerList21, innerList22, innerList31, innerList32);
+        listOuter1.add(innerList11);
+        listOuter1.add(innerList12);
+        listOuter2.add(innerList21);
+        listOuter2.add(innerList22);
+        listOuter3.add(innerList31);
+        listOuter3.add(innerList32);
+        
+        inputList.add(listOuter1);
+        inputList.add(listOuter2);
+        inputList.add(listOuter3);
+        
+        list  = new ListOLists(inputList);
+        
+        //list.addCustomList(inputList);
     }
     
     @Test(expected = AssertionError.class)
     public void test_LargestValue_SingleH_ReturnInvalidOutput() { 
-        assertEquals(null, listOLists.getValue(list, "H"));
+        assertEquals(null, list.getValue("H"));
     }
 
     @Test(expected = AssertionError.class)
     public void test_LargestValue_SingleT_ReturnInvalidOutput() { 
-        assertEquals(null, listOLists.getValue(list, "T"));
+        assertEquals(null, list.getValue("T"));
     }
 
     @Test(expected = AssertionError.class)
     public void test_LargestValue_EndsWithT_ReturnInvalidOutput() { 
-        assertEquals(null, listOLists.getValue(list, "HHT"));
+        assertEquals(null, list.getValue("HHT"));
     }
 
     @Test
     public void test_LargestValue__ReturnValidOutput() { 
-        assertEquals(1, Integer.parseInt(listOLists.getValue(list, "HHH")));
+        assertEquals(1, Integer.parseInt(list.getValue("HHH")));
     }
 
     @Test
     public void test_LargestValue_HHTH_ReturnValidOutput() { 
-        assertEquals(2, Integer.parseInt(listOLists.getValue(list, "HHTH")));
+        assertEquals(2, Integer.parseInt(list.getValue("HHTH")));
     }
 
     @Test
     public void test_LargestValue_HHTTH_ReturnValidOutput() { 
-        assertEquals(3, Integer.parseInt(listOLists.getValue(list, "HHTTH")));
+        assertEquals(3, Integer.parseInt(list.getValue("HHTTH")));
     }
 
     @Test
     public void test_LargestValue_HHTTTH_ReturnValidOutput() { 
-        assertEquals(4, Integer.parseInt(listOLists.getValue(list, "HHTTTH")));
+        assertEquals(4, Integer.parseInt(list.getValue("HHTTTH")));
     }
 
     @Test
     public void test_LargestValue_HHTH_ReturnInvalidOutput() { 
-        assertEquals(5, Integer.parseInt(listOLists.getValue(list, "HTHH")));
+        assertEquals(5, Integer.parseInt(list.getValue("HTHH")));
     }
 
     @Test(expected = AssertionError.class)
     public void test_LargestValue_IfInputIsAccessingArrayList_ReturnInvalidOutput() { 
-        assertEquals(null, listOLists.getValue(list, "HTH"));
+        assertEquals(null, list.getValue("HTH"));
     }
 
    

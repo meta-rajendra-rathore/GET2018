@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="images/html_logo.png">
+		<title>Add New employee</title>
+		<link rel="stylesheet" href="styles/basicStyles.css">
+	</head>
+	<body>
+		<!--This block contains the nav bar of the website-->
+		<table width=70% align="center" class="nav_bar">
+			<tr>
+				<td colspan="1" align="left">
+					<img src="images/html_logo.png" alt="HTML_LOGO" width=100px/>
+				</td>
+				<td colspan="1" align="right">
+					<a href="home.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="product.html">Product</a>
+					<a href="gallery.html">Gallery</a>
+					<a href="contact.html">Contact</a>
+					<a href="signin.html">Sign In</a>
+					<a href="search_emp.html">New User?</a>
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<!--This block contains the nav bar of the website-->
+
+		<form id="search_emp_form" action = "SearchEmployees">
+			<table cellpadding="5px" align = "center">
+				<tr>
+					<td>Enter what you are searching for</td>
+					<td><input type="text" placeholder="Your search" id= "search_emp_query" name = "search_emp_query" required></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td align="right"><input type="submit" value="Search Employee" id="button_new_user"> 
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

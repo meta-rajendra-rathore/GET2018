@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="icon" href="images/html_logo.png">
+		<title>Sign up</title>
+		<link rel="stylesheet" href="styles/basicStyles.css">
+		<script src="scripts/validation.js"></script>
+	</head>
+	<body>
+		<!--This block contains the nav bar of the website-->
+		<table width=70% align="center" class="nav_bar">
+			<tr>
+				<td colspan="1" align="left">
+					<img src="images/html_logo.png" alt="HTML_LOGO" width=100px/>
+				</td>
+				<td colspan="1" align="right">
+					<a href="home.html">Home</a>
+					<a href="about.html">About</a>
+					<a href="product.html">Product</a>
+					<a href="gallery.html">Gallery</a>
+					<a href="contact.html">Contact</a>
+					<a href="signin.html">Sign In</a>
+					<a href="signup.html">New User?</a>
+				</td>
+			</tr>
+		</table>
+		<hr>
+		<!--This block contains the nav bar of the website-->		 
+		
+		<h1 align = "center">Like our website? Become a member</h1>
+		<h2 align = "center">Create a new account now!</h2>
+		<form method="post" id="signup_form" onsubmit="return validateSignUpForm()" action = "home.html">
+			<table cellpadding="5px" align = "center">
+				<tr>
+					<td>First Name</td>
+					<td><input type="text" onchange="resetDefault(this)" onblur="isNameValid(this)" oninput="setCustomValidity('')" placeholder="First Name" id= "signup_first_name" required></td>
+				</tr>
+				<tr>
+					<td>Last Name</td>
+					<td><input type="text" onchange="resetDefault(this)" onblur="isNameValid(this)" oninput="setCustomValidity('')" placeholder="Last Name" id= "signup_last_name" required></td>
+				</tr>
+				<tr>
+					<td>Email</td>
+					<td><input type="text" onchange="resetDefault(this)" onblur="isEmailValid(this)" oninput="setCustomValidity('')" placeholder="Email" id= "signup_email" required></td>
+				</tr>
+				<tr>
+					<td>Password</td>
+					<td><input type="password" onchange="resetDefault(this)" onkeyup="checkPassStrength(this)" onblur="isPasswordValid(this)" oninput="setCustomValidity('')" placeholder="Password" id= "signup_password" required></td>
+					<td><span id="pass_strength"></span></td>
+				</tr>
+				<tr>
+					<td>Confirm Password</td>
+					<td><input type="password" onchange="resetDefault(this)" onblur="isConfirmPasswordValid(this)" oninput="setCustomValidity('')" placeholder="Confirm Password" id = "signup_confirm_password" required></td>
+				</tr>
+				<tr>
+					<td>Contact Number</td>
+					<td><input type="text" onchange="resetDefault(this)" onblur="isContactValid(this)" oninput="setCustomValidity('')" placeholder="Contact number" id= "signup_contact" required></td>
+				</tr>
+				<tr>
+					<td>Organization</td>
+					<td><select name="city" required>
+							<option value="" disabled selected>Select Organisation</option>
+							<option value="Metacube">Metacube</option>
+							<option value="TCS">TCS</option>
+							<option value="Wipro">Wipro</option>
+							<option value="Infosys">Infosys</option>
+						</select></td>
+				<tr>
+					<td><a href="signin.html">Already have an account? Sign in instead</a></td>
+					<td align="right"><input type="submit" value="Create new account" id="button_new_user"> 
+				</tr>
+			</table>
+		</form>
+	</body>
+</html>

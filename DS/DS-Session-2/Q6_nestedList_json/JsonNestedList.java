@@ -2,14 +2,14 @@ package datastructure_2.Q6_nestedList_json;
 
 import java.io.File;
 import java.io.FileReader;
-
 import java.util.ArrayList;
 import java.util.List;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import ds_Assignment_2.Q5_nestedList.IList;
+
+import datastructure_2.Q5_nestedList.IList;
 
 /**
  * @author Rajendra Singh Rathore
@@ -28,8 +28,8 @@ public class JsonNestedList implements IList {
         
         File file = null;
         try {
-            String location = "D:/Demo/GET2018/src/ds_Assignment_2/Q6_nestedList_json";
-            file = new File(location, "/" + fileName);
+            //String location = "D:/Eclipse/GET2018/src/datastructure_2/Q6_nestedList_json";
+            file = new File(fileName);
             
             JSONParser parser = new JSONParser();
 
