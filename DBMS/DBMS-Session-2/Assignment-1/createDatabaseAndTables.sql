@@ -14,10 +14,10 @@ CREATE TABLE User(
     PRIMARY KEY (ID)
 );
 
-CREATE TABLE Address(
+CREATE TABLE Address (
     ID INT NOT NULL AUTO_INCREMENT,
     user_ID INT,
-    user_contact_no VARCHAR(11) NOT NULL,
+    user_contact_no INT NOT NULL,
     flat_no VARCHAR(10),
     street VARCHAR(30),
     city VARCHAR(15),
@@ -36,7 +36,7 @@ CREATE TABLE Category(
     PRIMARY KEY (ID)
 );
 
-CREATE TABLE Product(
+CREATE TABLE Product (
     ID INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(30),
     category_ID INT,
@@ -60,7 +60,7 @@ CREATE TABLE Category_of_product(
         REFERENCES Category (ID)
 );
 
-CREATE TABLE Image(
+CREATE TABLE Image (
     ID INT NOT NULL AUTO_INCREMENT,
     name VARCHAR(30),
     product_ID INT,
@@ -96,4 +96,4 @@ CREATE TABLE Products_In_Order(
         REFERENCES User (ID),
     FOREIGN KEY (product_ID)
         REFERENCES Product (ID)
-);
+  );

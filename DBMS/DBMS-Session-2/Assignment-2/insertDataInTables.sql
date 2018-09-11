@@ -9,7 +9,6 @@ VALUES ( 'Rajendra', 'rajendra@gmail.com', true, 'password', STR_TO_DATE('05-06-
 
 INSERT INTO User ( name, mail, isadmin, password, birth_date, contact_no) 
 VALUES ( 'Mahesh', 'mahesh@gmail.com', false, 'password123', STR_TO_DATE('25-10-1997', '%d-%m-%Y'), 8763573637 );
-
 LOAD DATA LOCAL INFILE 'D:/DBMS/DBMS-Session-2/Assignment-2/insertInUser.txt'
 INTO TABLE User
 FIELDS TERMINATED BY ', ' 
