@@ -1,0 +1,181 @@
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Verdana;
+}
+
+.flex_div, nav {
+	display: flex;
+	justify-content: space-between; 
+}
+
+header {
+	padding: 25px 200px;
+	background-image: url("../images/homebg.png");
+}
+
+section {
+	padding: 100px 200px 0px 200px;
+}
+
+footer {
+	color: #dfdfdfa0;
+	text-align: center;
+	background-color: #00004d;
+	padding: 50px 200px;
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	margin: 0px 5px;
+}
+
+body {
+	background-image: url(../images/bodybg.png);
+}
+
+.title_div {
+	text-align: center;
+	margin-bottom: 100px;
+}
+
+.title_div h2 {
+	color: #6488F9;
+	font-size: 35px;
+	margin-bottom: 20px;
+}
+
+.title_div span {
+	color: #979797; /* Light grey color*/
+}
+
+.feature_div h1 {
+	font-size: 20px;
+}
+
+.feature_div p {
+	color: #979797;
+	font-size: 15px;
+	margin-top : 20px;
+}
+
+.feature_div div {
+	margin : 0px 20px;
+}
+
+#features_preview_image {
+	text-align: center;
+	margin: 100px auto 0px;
+}
+
+.feature_block {
+	margin: 100px 50px;
+}
+
+.feature_block * {
+	margin: 20px;
+}
+
+.feature_block h3 {
+	font-size: 35px;
+}
+
+.feature_block p {
+	font-size: 20px;
+	color: #979797;
+}
+
+#home {
+	background-image: url('../images/homebg.png');
+	padding-bottom: 100px;
+}
+
+#home div {
+	width: 100%;
+	flex : 50%;
+}
+
+#home h1 {
+	padding-top: 20px;
+	font-size : 45px;
+	margin-bottom: 60px;
+}
+
+#home a {
+	color: white;
+	text-decoration: none;
+	margin-right: 5px;
+	padding: 20px 30px;
+	border-radius: 5%;
+}
+
+#home_download {
+	background-color: #FF0000;
+}
+
+#home_feature {
+	background-color : #4663C3;
+}
+
+hr {
+	background-color: #555;
+	border: none;
+    height: 1px;
+	margin: 40px 0px;
+}
+
+footer p {
+	font-size: 12px;
+}
+
+.review {
+	margin: 0px 50px 50px;
+}
+
+.review p {
+	font-size: 15px;
+	margin-bottom: 15px;
+}
+
+.review span {	font-size: 12px;
+	color: #979797;
+}
+
+.quotes_close {
+	float: right;
+}
+
+#download {
+	background-image: url("../images/downloadbg.png");
+}
+
+#download div {
+	margin : 10px 30px 0px;
+}
+
+#download h2 {
+	color: white;
+	font-size: 30px;
+	margin-bottom: 20px;
+} 
+
+#download p {
+	color: white;
+	font-size: 12px;
+	font-style: ;
+}
+
+#download_preview {
+	width: 100%;
+}
+
+.store {
+	margin : 20px 5px 0px 0px;
+}
+
+@font-face {
+font-family: "FontAwesome";
+src: url("fontawesome-webfont.eot");
+}
