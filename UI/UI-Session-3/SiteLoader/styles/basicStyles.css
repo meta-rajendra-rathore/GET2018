@@ -1,0 +1,51 @@
+#board {
+	display: flex;
+	flex-wrap: wrap;
+	position: absolute;
+	left: 50%;
+	top : 50%;
+	margin: -100px 0px 0px -100px;
+	width: 200px;
+	height: 200px;
+}
+
+#board div {
+	width: 100px;
+	height: 100px;
+}
+
+#div_1 {
+	background-color: #7C47E1;
+	position: absolute;
+	animation: moveAnimation 2s infinite;
+	animation-delay: -2s;
+}
+
+#div_2 {
+	background-color: #F85665;
+	position: absolute;
+	animation: moveAnimation 2s infinite;
+	animation-delay: -1.5s;
+}
+
+#div_3 {
+	background-color: #F8C051;
+	position: absolute;
+	animation: moveAnimation 2s infinite;
+	animation-delay: -1s;
+}
+
+#div_4 {
+	background-color: #2491F3;
+	position: absolute;
+	animation: moveAnimation 2s infinite;
+	animation-delay: -0.5s;
+}
+
+@keyframes moveAnimation {
+  	0%   {left:0px; top:0px;}
+  	25%  {left:0px; top:100px;}
+  	50%  {left:100px; top:100px;}
+  	75%  {left:100px; top:0px;}
+  	100% {left:0px; top:0px;}
+  }
