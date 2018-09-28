@@ -1,59 +1,95 @@
 * {
 	margin: 0px;
 	padding: 0px;
-	font-family: Verdana;
-}
-
-nav {
-	display: flex;
-	justify-content: space-between; 
-}
-
-.flex_div {
-	display: flex;
-	justify-content: space-evenly; 
-}
-
-header {
-	padding: 25px 200px;
-	background-image: url("../images/homebg.png");
-}
-
-section {
-	padding: 100px 200px 0px 200px;
-}
-
-footer {
-	color: #dfdfdfa0;
-	text-align: center;
-	background-color: #00004d;
-	padding: 50px 200px;
-}
-
-nav a {
-	text-decoration: none;
-	color: white;
-	font-size: 14px;
-	margin: 0px 5px;
+	font-family: Verdana, FontAwesome;
 }
 
 body {
 	background-image: url(../images/bodybg.png);
 }
 
+header {
+	padding: 25px 0px;
+	background-image: url("../images/homebg.png");
+}
+
+footer {
+	color: #dfdfdfa0;
+	text-align: center;
+	background-color: #00004d;
+	padding: 35px 0px;
+}
+
+.cover {
+	width: 1000px;
+	margin: auto;
+}
+
+.flex_element {
+	display: flex;
+	justify-content: space-between; 
+}
+
+nav a {
+	text-decoration: none;
+	color: white;
+	font-size: 14px;
+	padding: 0px 5px;
+}
+
+.nav_list, .social_list {
+	list-style-type: none;
+}
+
+.social_list i {
+	color:white;
+	padding: 0px 10px;
+	height : 20px;
+}
+
 .title_div {
 	text-align: center;
-	margin-bottom: 100px;
+	margin: 100px;
 }
 
 .title_div h2 {
 	color: #6488F9;
 	font-size: 35px;
-	margin-bottom: 20px;
+	margin: 20px;
 }
 
-.title_div span {
+.title_div p {
 	color: #979797; /* Light grey color*/
+}
+
+#home {
+	background-image: url('../images/homebg.png');
+	background-size: 100% 100%;
+	padding: 100px 0px;
+}
+
+#home h1 {
+	font-size : 45px;
+	color: white;
+	margin: 50px 0px;
+}
+
+#home a {
+	text-decoration: none;
+}
+
+.btn_red {
+	color: white;
+	background-color: #FF0000;
+	border-radius: 5%;
+	padding: 20px 30px;
+}
+
+.btn_blue {
+	color: white;
+	background-color : #4663C3;
+	border-radius: 5%;
+	padding: 20px 30px;
 }
 
 .feature_div h1 {
@@ -63,7 +99,11 @@ body {
 .feature_div p {
 	color: #979797;
 	font-size: 15px;
-	margin-top : 20px;
+	margin : 20px 0px;
+}
+
+.feature_div img {
+	height : 60px;
 }
 
 .feature_div div {
@@ -71,12 +111,13 @@ body {
 }
 
 #features_preview_image {
+	width: 100%;
 	text-align: center;
 	margin: 100px auto 0px;
 }
 
 .feature_block {
-	margin: 100px 50px;
+	margin: 60px 150px;
 }
 
 .feature_block * {
@@ -92,49 +133,46 @@ body {
 	color: #979797;
 }
 
-#home {
-	background-image: url('../images/homebg.png');
-	padding-bottom: 135px;
-	background-size: 100% 100%;
+.screenshot {
+	padding: 50px 0px;
 }
 
-#home div {
-	width: 100%;
-	flex : 50%;
+.shadow_block {
+	position: relative;
 }
 
-#home h1 {
-	font-size : 45px;
-	color: white;
-	padding-top: 20px;
-	margin-bottom: 60px;
+.screenshot_shadow {
+	transform: rotate(90deg);
+    position: absolute;
+    left: -12%;
+    top: 31%;
+    z-index: -1;
+	color: #DBDBDB;
+	font-size: 200px;
 }
 
-#home a {
-	color: white;
-	text-decoration: none;
-	margin-right: 5px;
-	padding: 20px 30px;
-	border-radius: 5%;
+.breif_atm {
+	display: flex;
+	align-items: left;
 }
 
-#home_download {
-	background-color: #FF0000;
+.breif_atm div {
+	height: 65px;
+	width: 65px;
+	display: flex;
+	justify-content: center;
+	margin: 0px -15px 10px 0px;
+	font-size: 15px;
+	color: #DBDBDB;
+	background-color: white;
+	border: 1px #DBDBDB;
+	border-radius: 50%;
+	border-style: dashed;
+	z-index: -1;
 }
 
-#home_feature {
-	background-color : #4663C3;
-}
-
-hr {
-	background-color: #555;
-	border: none;
-    height: 1px;
-	margin: 40px 0px;
-}
-
-footer p {
-	font-size: 12px;
+.breif_atm span {
+	padding-top: 0px;
 }
 
 .review {
@@ -146,7 +184,8 @@ footer p {
 	margin-bottom: 15px;
 }
 
-.review span {	font-size: 12px;
+.review span {	
+	font-size: 12px;
 	color: #979797;
 }
 
@@ -155,11 +194,22 @@ footer p {
 }
 
 #download {
+	position: relative;
 	background-image: url("../images/downloadbg.png");
+}/*
+
+#download > div {
+	justify-content: space-between;
+}*/
+
+#download_info_block {
+	padding: 100px 0px;
 }
 
-#download div {
-	margin : 10px 30px 0px;
+#download_preview {
+	margin: 130px 50px 0px;
+	height: 300px;
+	width: 450px;
 }
 
 #download h2 {
@@ -170,19 +220,36 @@ footer p {
 
 #download p {
 	color: white;
+	font-size: 14px;
+}
+
+#stores {
+	padding: 20px 0px;
+}
+
+#stores img {
+	width: 120px;
+}
+
+footer p {
 	font-size: 12px;
-	font-style: ;
 }
 
-#download_preview {
-	width: 100%;
+#footer_separator {
+	background-color: #555;/*
+	border: none;*/
+	height: 1px;
+	margin: 40px 100px;
 }
 
-.store {
-	margin : 20px 5px 0px 0px;
+@media(max-width: 460px)
+{
+	.cover {
+		width: 300px;
+	}
 }
 
 @font-face {
-font-family: "FontAwesome";
-src: url("fontawesome-webfont.eot");
+	font-family: FontAwesome;
+	src: url("../fonts/fontawesome-webfont.woff");
 }
