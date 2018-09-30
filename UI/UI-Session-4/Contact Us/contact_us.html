@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<link rel="icon" href="logo.png">
+	<link rel="stylesheet" type="text/css" href="basicStyles.css">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+</head>
+<body>
+	<h2>Contact Us Today!</h2>
+	<form>
+		<div>
+			<label>First Name</label>
+			<div><i class="fa fa-user icon"></i></div>
+			<input type="text" name="first_name" class="entries" placeholder="First Name" pattern="[A-z]{2,}" required/>
+		</div>
+		<div>
+			<label>Last Name</label>
+			<div><i class="fa fa-user"></i></div>
+			<input type="text" name="last_name" class="entries" placeholder="Last Name" pattern="[A-z]{2,}" required/>
+		</div>
+		<div>
+			<label>Email</label>
+			<div><i class="fa fa-envelope"></i></div>
+			<input type="email" name="email" class="entries" placeholder="E-Mail Address" required/>
+		</div>
+		<div>
+			<label>Phone #</label>
+			<div><i class="fa fa-phone"></i></div>
+			<input type="text" name="phone_number" class="entries" placeholder="(845)555-1212" pattern="[0-9]{10}" maxlength="10" required/>
+		</div>
+		<div>
+			<label>Address</label>
+			<div><i class="fa fa-home"></i></div>
+			<input type="text" name="address" class="entries" placeholder="Address" required/>
+		</div>
+		<div>
+			<label>City</label>
+			<div><i class="fa fa-home"></i></div>
+			<input type="text" name="city" class="entries" placeholder="City" pattern="[A-z]{2,}" required/>
+		</div>
+		<div>
+			<label>State</label>
+			<div><i class="fa fa-list-ul icon"></i></div>
+			<div class="entries" id="city_selector">
+				<select required>
+					<option value="" selected disabled>Please select your state</option>
+					<option value="Rajasthan">Rajasthan</option>
+					<option value="Goa">Goa</option>
+					<option value="Asam">Asam</option>
+					<option value="Kerala">Kerala</option>
+					<option value="J&K">J&K</option>
+				</select></div>
+			</div>
+			<div>
+				<label>Zip Code</label>
+				<div><i class="fa fa-home"></i></div>
+				<input type="text" name="zip_code" class="entries" placeholder="Zip Code" pattern="[0-9]{6}" maxlength="6" required/>
+			</div>
+			<div>
+				<label>Website or Domain name</label>
+				<div><i class="fa fa-globe-asia"></i></div>
+				<input type="url" name="website" class="entries" placeholder="Website or Domain name" required/>
+			</div>
+			<div id="radio">
+				<label>Do you have hosting?</label>
+				<div class="vertical_flex_container">
+					<div>
+						<input type="radio" name="hosting_available" value="yes" required> Yes
+					</div>
+					<div>
+						<input type="radio" name="hosting_available" value="no"> No
+					</div>
+				</div>
+			</div>
+			<div>
+				<label>Project Description</label>
+				<div><i class="fa fa-pen"></i></div>
+				<textarea name="project_desc" class="entries" placeholder="Project Description" rows="3" required></textarea>
+			</div>
+			<div>
+				<label></label>
+				<button type="submit" value="Send"><span>Send</span><i class="fas fa-location-arrow"></i></button>
+			</div>
+		</form>
+	</body>
+	</html>

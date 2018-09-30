@@ -1,0 +1,9 @@
+<svg height="300" width="300" 
+	xmlns="http://www.w3.org/2000/svg">
+	<g>
+		<circle cx="150" cy="150" r="150" fill="#FBAF3F"/>
+		<path d="M 10 150 H 290 M 150 10 V 290" stroke="#fff" stroke-width="40"/>
+		<!-- D is drawing element  -->
+		<!-- M move to point, H horizontal & V vertical line to x/y coordinate -->
+	</g>
+</svg>

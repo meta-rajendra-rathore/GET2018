@@ -1,0 +1,5 @@
+<svg height="300" width="300" 
+	xmlns="http://www.w3.org/2000/svg">
+	<path d="M 150,0    a 1 1 0 0 0     0,300" fill="#2e94d1" />
+	<path d="M 150,10    a 1 1 0 0 1     0,280" stroke="#979b9c" stroke-width="20" fill="#0000" />
+</svg>
