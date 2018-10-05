@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Contact Us</title>
+	<link rel="icon" href="images/logo.png">
+	<link rel="stylesheet" type="text/css" href="styles/basicStyles.css">
+	<script type="text/javascript" src="scripts/dynamicdivs.js"></script>
+	<script type="text/javascript" src="scripts/validation.js"></script>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+	<h2>Contact Us Today!</h2>
+	<form onsubmit="return validateForm()" id="form" action="feedback_detail.html">
+		<div id="first_name_row">
+			<label>First Name</label>
+			<div><i class="fa fa-user icon"></i></div>
+			<input type="text" name="first_name" class="entries" placeholder="First Name"/>
+		</div>
+		<div id="last_name_row">
+			<label>Last Name</label>
+			<div><i class="fa fa-user"></i></div>
+			<input type="text" name="last_name" class="entries" placeholder="Last Name"/>
+		</div>
+		<div id="phone_row">
+			<label>Email</label>
+			<div><i class="fa fa-envelope"></i></div>
+			<input type="text" name="email" class="entries" placeholder="E-Mail Address"/>
+		</div>
+		<div id="phone_row">
+			<label>Phone #</label>
+			<div><i class="fa fa-phone"></i></div>
+			<input type="text" name="phone_number" class="entries" placeholder="(845)555-1212"/>
+		</div>
+		<div id="address_row">
+			<label>Address</label>
+			<div><i class="fa fa-home"></i></div>
+			<input type="text" name="address" class="entries" placeholder="Address"/>
+		</div>
+		<div id="city_row">
+			<label>City</label>
+			<div><i class="fa fa-home"></i></div>
+			<input type="text" name="city" class="entries" placeholder="City"/>
+		</div>
+		<div id="state_row">
+			<label>State</label>
+			<div><i class="fa fa-list-ul icon"></i></div>
+			<div class="entries" id="city_selector">
+				<select name="state">
+					<option value="" selected disabled>Please select your state</option>
+					<option value="Rajasthan">Rajasthan</option>
+					<option value="Haryana">Haryana</option>
+					<option value="Maharashtra">Maharashtra</option>
+				</select>
+			</div>
+		</div>
+		<div id="submit_row">
+			<label></label>
+			<button type="submit" value="Send"><span>Send</span><i class="fas fa-location-arrow"></i></button>
+		</div>
+
+		<!-- Below is the structure of the dynamic divs which will be 
+			generated using javascript according to the state chosen -->
+
+		<!-- <div id="zipcode_row">
+			<label>Zip Code</label>
+			<div><i class="fa fa-home"></i></div>
+			<input type="text" name="zipcode" class="entries" placeholder="Zip Code" pattern="[0-9]{6}" maxlength="6" required/>
+		</div>
+		<div id="website_row">
+			<label>Website or Domain name</label>
+			<div><i class="fa fa-globe-asia"></i></div>
+			<input type="url" name="website" class="entries" placeholder="Website or Domain name" required/>
+		</div>
+		<div id="hosting_row">
+			<label>Do you have hosting?</label>
+			<div class="vertical_flex_container">
+				<div>
+					<input type="radio" name="hosting_available" value="yes" required> Yes
+				</div>
+				<div>
+					<input type="radio" name="hosting_available" value="no"> No
+				</div>
+			</div>
+		</div>
+		<div id="project_desc_row">
+			<label>Project Description</label>
+			<div><i class="fa fa-pen"></i></div>
+			<textarea name="project_desc" class="entries" placeholder="Project Description" rows="3" required></textarea>
+		</div> -->
+	</form>
+</body>
+</html>
