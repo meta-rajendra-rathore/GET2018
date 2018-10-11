@@ -1,0 +1,856 @@
+<html class=" js flexbox flexboxlegacy canvas canvastext webgl touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface generatedcontent video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <title>Annex - Responsive Bootstrap 4 Admin Dashboard</title>
+    <meta content="Admin Dashboard" name="description">
+    <meta content="Mannatthemes" name="author">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/morris.js/0.5.1/morris.css">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+</head>
+<body class="fixed-left" style="overflow: visible; height: 2000px">
+    <!-- Loader -->
+    <div id="preloader" style="display: none;"><div id="status" style="display: none;"><div class="spinner"></div></div></div>
+    <!-- Begin page -->
+    <div id="wrapper">
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left side-menu">
+            <button type="button" class="button-menu-mobile button-menu-mobile-topbar open-left waves-effect">
+            <i class="ion-close"></i>
+            </button>
+            <!-- LOGO -->
+            <div class="topbar-left">
+                <div class="text-center">
+                    <a href="index.html" class="logo"><i class="mdi mdi-assistant"></i> Annex</a>
+                    <!-- <a href="index.html" class="logo"><img src="assets/images/logo.png" height="24" alt="logo"></a> -->
+                </div>
+            </div>
+            <div class="slimScrollDiv" style="position: relative; overflow: hidden; width: auto; height: 800px;"><div class="sidebar-inner slimscrollleft" style="overflow: hidden; width: auto; height: 800px;">
+                <div id="sidebar-menu" class="active">
+                    <ul>
+                        <li class="menu-title">Main</li>
+                        <li class="active">
+                            <a href="index.html" class="waves-effect active">
+                                <i class="mdi mdi-airplay"></i>
+                                <span> Dashboard <span class="badge badge-pill badge-primary float-right">7</span></span>
+                            </a>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-layers"></i> <span> Advanced UI </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="advanced-highlight.html">Highlight</a></li>
+                                <li><a href="advanced-rating.html">Rating</a></li>
+                                <li><a href="advanced-alertify.html">Alertify</a></li>
+                                <li><a href="advanced-rangeslider.html">Range Slider</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="calendar.html" class="waves-effect"><i class="mdi mdi-calendar-clock"></i><span> Calendar </span></a>
+                        </li>
+                        <li class="menu-title">Components</li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-bullseye"></i> <span> UI Elements </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="ui-buttons.html">Buttons</a></li>
+                                <li><a href="ui-cards.html">Cards</a></li>
+                                <li><a href="ui-tabs-accordions.html">Tabs &amp; Accordions</a></li>
+                                <li><a href="ui-modals.html">Modals</a></li>
+                                <li><a href="ui-images.html">Images</a></li>
+                                <li><a href="ui-alerts.html">Alerts</a></li>
+                                <li><a href="ui-progressbars.html">Progress Bars</a></li>
+                                <li><a href="ui-dropdowns.html">Dropdowns</a></li>
+                                <li><a href="ui-lightbox.html">Lightbox</a></li>
+                                <li><a href="ui-navs.html">Navs</a></li>
+                                <li><a href="ui-pagination.html">Pagination</a></li>
+                                <li><a href="ui-popover-tooltips.html">Popover &amp; Tooltips</a></li>
+                                <li><a href="ui-badge.html">Badge</a></li>
+                                <li><a href="ui-carousel.html">Carousel</a></li>
+                                <li><a href="ui-video.html">Video</a></li>
+                                <li><a href="ui-typography.html">Typography</a></li>
+                                <li><a href="ui-sweet-alert.html">Sweet-Alert</a></li>
+                                <li><a href="ui-grid.html">Grid</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-clipboard-outline"></i><span> Forms </span> <span class="badge badge-pill badge-info float-right">8</span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="form-elements.html">Form Elements</a></li>
+                                <li><a href="form-validation.html">Form Validation</a></li>
+                                <li><a href="form-advanced.html">Form Advanced</a></li>
+                                <li><a href="form-editors.html">Form Editors</a></li>
+                                <li><a href="form-uploads.html">Form File Upload</a></li>
+                                <li><a href="form-mask.html">Form Mask</a></li>
+                                <li><a href="form-summernote.html">Summernote</a></li>
+                                <li><a href="form-xeditable.html">Form Xeditable</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-gauge"></i><span> Charts </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="charts-morris.html">Morris Chart</a></li>
+                                <li><a href="charts-chartist.html">Chartist Chart</a></li>
+                                <li><a href="charts-chartjs.html">Chartjs Chart</a></li>
+                                <li><a href="charts-flot.html">Flot Chart</a></li>
+                                <li><a href="charts-c3.html">C3 Chart</a></li>
+                                <li><a href="charts-other.html">Jquery Knob Chart</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-cards-outline"></i> <span> Icons </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="icons-material.html">Material Design</a></li>
+                                <li><a href="icons-ion.html">Ion Icons</a></li>
+                                <li><a href="icons-fontawesome.html">Font Awesome</a></li>
+                                <li><a href="icons-themify.html">Themify Icons</a></li>
+                                <li><a href="icons-dripicons.html">Dripicons</a></li>
+                                <li><a href="icons-typicons.html">Typicons Icons</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-table"></i><span> Tables </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="tables-basic.html">Basic Tables</a></li>
+                                <li><a href="tables-datatable.html">Data Table</a></li>
+                                <li><a href="tables-responsive.html">Responsive Table</a></li>
+                                <li><a href="tables-editable.html">Editable Table</a></li>
+                            </ul>
+                        </li>
+                        <li class="menu-title">Extra</li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-map-marker-multiple"></i><span> Maps </span> <span class="badge badge-pill badge-danger float-right">2</span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="maps-google.html"> Google Map</a></li>
+                                <li><a href="maps-vector.html"> Vector Map</a></li>
+                            </ul>
+                        </li>
+                        <li class="has_sub">
+                            <a href="javascript:void(0);" class="waves-effect"><i class="mdi mdi-google-pages"></i><span> Pages </span> <span class="float-right"><i class="mdi mdi-chevron-right"></i></span></a>
+                            <ul class="list-unstyled">
+                                <li><a href="pages-login.html">Login</a></li>
+                                <li><a href="pages-register.html">Register</a></li>
+                                <li><a href="pages-recoverpw.html">Recover Password</a></li>
+                                <li><a href="pages-lock-screen.html">Lock Screen</a></li>
+                                <li><a href="pages-blank.html">Blank Page</a></li>
+                                <li><a href="pages-404.html">Error 404</a></li>
+                                <li><a href="pages-500.html">Error 500</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div class="clearfix"></div>
+                </div><div class="slimScrollBar" style="background: rgb(158, 165, 171); width: 10px; position: absolute; top: 0px; opacity: 0.4; display: none; border-radius: 7px; z-index: 99; right: 1px; height: 800px;"></div><div class="slimScrollRail" style="width: 10px; height: 100%; position: absolute; top: 0px; display: none; border-radius: 7px; background: rgb(51, 51, 51); opacity: 0.2; z-index: 90; right: 1px;"></div></div> <!-- end sidebarinner -->
+            </div>
+            <!-- Left Sidebar End -->
+            <!-- Start right Content here -->
+            <div class="content-page">
+                <!-- Start content -->
+                <div class="content">
+                    <!-- Top Bar Start -->
+                    <div class="topbar">
+                        <nav class="navbar-custom">
+                            <ul class="list-inline float-right mb-0">
+                                <!-- language-->
+                                <li class="list-inline-item dropdown notification-list hide-phone">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect text-white" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                        English <img src="assets/images/flags/us_flag.jpg" class="ml-2" height="16" alt="">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right language-switch">
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/italy_flag.jpg" alt="" height="16"><span> Italian </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/french_flag.jpg" alt="" height="16"><span> French </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/spain_flag.jpg" alt="" height="16"><span> Spanish </span></a>
+                                        <a class="dropdown-item" href="#"><img src="assets/images/flags/russia_flag.jpg" alt="" height="16"><span> Russian </span></a>
+                                    </div>
+                                </li>
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                        <i class="ti-email noti-icon"></i>
+                                        <span class="badge badge-danger noti-icon-badge">5</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
+                                        <!-- item-->
+                                        <div class="dropdown-item noti-title">
+                                            <h5><span class="badge badge-danger float-right">745</span>Messages</h5>
+                                        </div>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-2.jpg" alt="user-img" class="img-fluid rounded-circle"> </div>
+                                            <p class="notify-details"><b>Charles M. Jones</b><small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
+                                        </a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-3.jpg" alt="user-img" class="img-fluid rounded-circle"> </div>
+                                            <p class="notify-details"><b>Thomas J. Mimms</b><small class="text-muted">You have 87 unread messages</small></p>
+                                        </a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon"><img src="assets/images/users/avatar-4.jpg" alt="user-img" class="img-fluid rounded-circle"> </div>
+                                            <p class="notify-details"><b>Luis M. Konrad</b><small class="text-muted">It is a long established fact that a reader will</small></p>
+                                        </a>
+                                        <!-- All-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            View All
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                        <i class="ti-bell noti-icon"></i>
+                                        <span class="badge badge-success noti-icon-badge">23</span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right dropdown-arrow dropdown-menu-lg">
+                                        <!-- item-->
+                                        <div class="dropdown-item noti-title">
+                                            <h5><span class="badge badge-danger float-right">87</span>Notification</h5>
+                                        </div>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-primary"><i class="mdi mdi-cart-outline"></i></div>
+                                            <p class="notify-details"><b>Your order is placed</b><small class="text-muted">Dummy text of the printing and typesetting industry.</small></p>
+                                        </a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-success"><i class="mdi mdi-message"></i></div>
+                                            <p class="notify-details"><b>New Message received</b><small class="text-muted">You have 87 unread messages</small></p>
+                                        </a>
+                                        <!-- item-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            <div class="notify-icon bg-warning"><i class="mdi mdi-martini"></i></div>
+                                            <p class="notify-details"><b>Your item is shipped</b><small class="text-muted">It is a long established fact that a reader will</small></p>
+                                        </a>
+                                        <!-- All-->
+                                        <a href="javascript:void(0);" class="dropdown-item notify-item">
+                                            View All
+                                        </a>
+                                    </div>
+                                </li>
+                                <li class="list-inline-item dropdown notification-list">
+                                    <a class="nav-link dropdown-toggle arrow-none waves-effect nav-user" data-toggle="dropdown" href="#" role="button" aria-haspopup="false" aria-expanded="false">
+                                        <img src="assets/images/users/avatar-1.jpg" alt="user" class="rounded-circle">
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right profile-dropdown ">
+                                        <!-- item-->
+                                        <div class="dropdown-item noti-title">
+                                            <h5>Welcome</h5>
+                                        </div>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-account-circle m-r-5 text-muted"></i> Profile</a>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-wallet m-r-5 text-muted"></i> My Wallet</a>
+                                        <a class="dropdown-item" href="#"><span class="badge badge-success float-right">5</span><i class="mdi mdi-settings m-r-5 text-muted"></i> Settings</a>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-lock-open-outline m-r-5 text-muted"></i> Lock screen</a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#"><i class="mdi mdi-logout m-r-5 text-muted"></i> Logout</a>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="list-inline menu-left mb-0">
+                                <li class="float-left">
+                                    <button class="button-menu-mobile open-left waves-light waves-effect">
+                                    <i class="mdi mdi-menu"></i>
+                                    </button>
+                                </li>
+                                <li class="hide-phone app-search">
+                                    <form role="search" class="">
+                                        <input type="text" placeholder="Search..." class="form-control">
+                                        <a href=""><i class="fa fa-search"></i></a>
+                                    </form>
+                                </li>
+                            </ul>
+                            <div class="clearfix"></div>
+                        </nav>
+                    </div>
+                    <!-- Top Bar End -->
+                    <div class="page-content-wrapper ">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="page-title-box">
+                                        <div class="btn-group float-right">
+                                            <ol class="breadcrumb hide-phone p-0 m-0">
+                                                <li class="breadcrumb-item"><a href="#">Annex</a></li>
+                                                <li class="breadcrumb-item active">Dashboard</li>
+                                            </ol>
+                                        </div>
+                                        <h4 class="page-title">Dashboard</h4>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- end page title end breadcrumb -->
+                            
+                            <div class="row">
+                                <!-- Column -->
+                                <div class="col-md-6 col-lg-6 col-xl-3">
+                                    <div class="card m-b-30">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <div class="col-3 align-self-center">
+                                                    <div class="round">
+                                                        <i class="mdi mdi-webcam"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 align-self-center text-center">
+                                                    <div class="m-l-10">
+                                                        <h5 class="mt-0 round-inner">$18090</h5>
+                                                        <p class="mb-0 text-muted">Visits Today</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3 align-self-end align-self-center">
+                                                    <h6 class="m-0 float-right text-center text-danger"> <i class="mdi mdi-arrow-down"></i> <span>5.26%</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <!-- Column -->
+                                <div class="col-md-6 col-lg-6 col-xl-3">
+                                    <div class="card m-b-30">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <div class="col-3 align-self-center">
+                                                    <div class="round">
+                                                        <i class="mdi mdi-account-multiple-plus"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 text-center align-self-center">
+                                                    <div class="m-l-10 ">
+                                                        <h5 class="mt-0 round-inner">562</h5>
+                                                        <p class="mb-0 text-muted">New Users</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3 align-self-end align-self-center">
+                                                    <h6 class="m-0 float-right text-center text-success"> <i class="mdi mdi-arrow-up"></i> <span>8.68%</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <!-- Column -->
+                                <div class="col-md-6 col-lg-6 col-xl-3">
+                                    <div class="card m-b-30">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <div class="col-3 align-self-center">
+                                                    <div class="round ">
+                                                        <i class="mdi mdi-basket"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 align-self-center text-center">
+                                                    <div class="m-l-10 ">
+                                                        <h5 class="mt-0 round-inner">7514</h5>
+                                                        <p class="mb-0 text-muted">New Orders</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3 align-self-end align-self-center">
+                                                    <h6 class="m-0 float-right text-center text-danger"> <i class="mdi mdi-arrow-down"></i> <span>2.35%</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                                <!-- Column -->
+                                <div class="col-md-6 col-lg-6 col-xl-3">
+                                    <div class="card m-b-30">
+                                        <div class="card-body">
+                                            <div class="d-flex flex-row">
+                                                <div class="col-3 align-self-center">
+                                                    <div class="round">
+                                                        <i class="mdi mdi-rocket"></i>
+                                                    </div>
+                                                </div>
+                                                <div class="col-6 align-self-center text-center">
+                                                    <div class="m-l-10">
+                                                        <h5 class="mt-0 round-inner">$32874</h5>
+                                                        <p class="mb-0 text-muted">Total Sales</p>
+                                                    </div>
+                                                </div>
+                                                <div class="col-3 align-self-end align-self-center">
+                                                    <h6 class="m-0 float-right text-center text-success"> <i class="mdi mdi-arrow-up"></i> <span>2.35%</span></h6>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Column -->
+                            </div>
+                            <div class="row">
+                                <div class="col-md-12 col-lg-12 col-xl-8">
+                                    <div class="card m-b-30">
+                                        <div class="card-body">
+                                            <h5 class="header-title pb-3 mt-0">Overview</h5>
+                                            <div id="multi-line-chart" style="height: 400px; position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="400" version="1.1" width="609" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><text x="32.515625" y="361.5" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">0</tspan></text><path fill="none" stroke="#eef0f2" d="M45.015625,361.5H584" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.515625" y="277.375" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">50</tspan></text><path fill="none" stroke="#eef0f2" d="M45.015625,277.375H584" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.515625" y="193.25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">100</tspan></text><path fill="none" stroke="#eef0f2" d="M45.015625,193.25H584" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.515625" y="109.12499999999997" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4.249999999999972" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">150</tspan></text><path fill="none" stroke="#eef0f2" d="M45.015625,109.12499999999997H584" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="32.515625" y="25" text-anchor="end" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: end; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">200</tspan></text><path fill="none" stroke="#eef0f2" d="M45.015625,25H584" stroke-width="0.5" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="584" y="374" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2015</tspan></text><text x="494.21027070972156" y="374" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2014</tspan></text><text x="404.42054141944317" y="374" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2013</tspan></text><text x="314.3848128708352" y="374" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2012</tspan></text><text x="224.5950835805568" y="374" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2011</tspan></text><text x="134.8053542902784" y="374" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2010</tspan></text><text x="45.015625" y="374" text-anchor="middle" font-family="sans-serif" font-size="12px" stroke="none" fill="#888888" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: sans-serif; font-size: 12px; font-weight: normal;" font-weight="normal" transform="matrix(1,0,0,1,0,6.75)"><tspan dy="4.25" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">2009</tspan></text><path fill="none" stroke="#e785da" d="M45.015625,361.5C67.4630573225696,340.46875,112.35792196770879,308.921875,134.8053542902784,277.375C157.25278661284798,245.828125,202.1476512579872,107.02187499999997,224.5950835805568,109.12499999999997C247.0425159031264,111.22812499999998,291.9373805482656,294.2,314.3848128708352,294.2C336.8937450079872,294.2,381.9116092822912,109.12499999999997,404.42054141944317,109.12499999999997C426.86797374201274,109.12499999999997,471.762838387152,289.99375,494.21027070972156,294.2C516.6577030322911,298.40625,561.5525676774304,180.63124999999997,584,142.77499999999998" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#00bcd2" d="M45.015625,361.5C67.4630573225696,348.88125,112.35792196770879,321.540625,134.8053542902784,311.025C157.25278661284798,300.509375,202.1476512579872,287.890625,224.5950835805568,277.375C247.0425159031264,266.859375,291.9373805482656,239.50148768809848,314.3848128708352,226.89999999999998C336.8937450079872,214.26398768809847,381.9116092822912,191.16701436388507,404.42054141944317,176.42499999999998C426.86797374201274,161.72326436388508,471.762838387152,121.74374999999996,494.21027070972156,109.12499999999997C516.6577030322911,96.50624999999997,561.5525676774304,83.88749999999996,584,75.47499999999997" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#007bff" d="M45.015625,361.5C67.4630573225696,298.40625,112.35792196770879,113.33124999999997,134.8053542902784,109.12499999999997C157.25278661284798,104.91874999999997,202.1476512579872,327.85,224.5950835805568,327.85C247.0425159031264,327.85,291.9373805482656,109.12499999999997,314.3848128708352,109.12499999999997C336.8937450079872,109.12499999999997,381.9116092822912,306.78997948016416,404.42054141944317,327.85C426.86797374201274,348.85247948016416,471.762838387152,304.715625,494.21027070972156,277.375C516.6577030322911,250.03437499999998,561.5525676774304,151.18749999999997,584,109.12499999999997" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="45.015625" cy="361.5" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="134.8053542902784" cy="277.375" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="224.5950835805568" cy="109.12499999999997" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="314.3848128708352" cy="294.2" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="404.42054141944317" cy="109.12499999999997" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="494.21027070972156" cy="294.2" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="584" cy="142.77499999999998" r="4" fill="#e785da" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="45.015625" cy="361.5" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="134.8053542902784" cy="311.025" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="224.5950835805568" cy="277.375" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="314.3848128708352" cy="226.89999999999998" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="404.42054141944317" cy="176.42499999999998" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="494.21027070972156" cy="109.12499999999997" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="584" cy="75.47499999999997" r="4" fill="#00bcd2" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="45.015625" cy="361.5" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="134.8053542902784" cy="109.12499999999997" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="224.5950835805568" cy="327.85" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="314.3848128708352" cy="109.12499999999997" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="404.42054141944317" cy="327.85" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="494.21027070972156" cy="277.375" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="584" cy="109.12499999999997" r="4" fill="#007bff" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg><div class="morris-hover morris-default-style" style="display: none;"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-12 col-xl-4">
+                                    <div class="card m-b-30">
+                                        <div class="card-body">
+                                            <a href="" class="btn btn-primary btn-sm float-right">More Info</a>
+                                            <h5 class="header-title mt-0 pb-3">Revenue By Country</h5>
+                                            
+                                            <ul class="list-unstyled list-inline text-center">
+                                                <li class="list-inline-item">
+                                                    <p><i class="mdi mdi-checkbox-blank-circle text-primary mr-2"></i>Canada</p>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <p><i class="mdi mdi-checkbox-blank-circle text-info mr-2"></i>USA</p>
+                                                </li>
+                                                <li class="list-inline-item">
+                                                    <p><i class="mdi mdi-checkbox-blank-circle text-greylight mr-2"></i>London</p>
+                                                </li>
+                                            </ul>
+                                            <div id="morris-donut-chart" style="height:345px;"><svg height="345" version="1.1" width="269" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.65625px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="none" stroke="#40a4f1" d="M134.5,255.5A83,83,0,0,0,213.0351026056854,199.3558682360944" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#40a4f1" stroke="#ffffff" d="M134.5,258.5A86,86,0,0,0,215.87372077215596,200.32656226872433L247.5716236310772,211.1659789664251A119.5,119.5,0,0,1,134.5,292Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#5b6be8" d="M213.0351026056854,199.3558682360944A83,83,0,0,0,60.06120673284315,135.7867046299371" stroke-width="2" opacity="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 1;"></path><path fill="#5b6be8" stroke="#ffffff" d="M215.87372077215596,200.32656226872433A86,86,0,0,0,57.37064794005434,134.45971805029626L22.841810099264706,117.43005694490563A124.5,124.5,0,0,1,252.3026539085281,212.7838023541416Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><path fill="none" stroke="#c1c5e2" d="M60.06120673284315,135.7867046299371A83,83,0,0,0,134.47392478140412,255.4999959041142" stroke-width="2" opacity="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); opacity: 0;"></path><path fill="#c1c5e2" stroke="#ffffff" d="M57.37064794005434,134.45971805029626A86,86,0,0,0,134.47298230362355,258.4999957560701L134.46245796840716,291.99999410291144A119.5,119.5,0,0,1,27.326074753912707,119.64170124430701Z" stroke-width="3" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><text x="134.5" y="162.5" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="15px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 15px; font-weight: 800;" font-weight="800" transform="matrix(1.9762,0,0,1.9762,-131.2824,-168.881)" stroke-width="0.5060240963855421"><tspan dy="6" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Canada</tspan></text><text x="134.5" y="182.5" text-anchor="middle" font-family="&quot;Arial&quot;" font-size="14px" stroke="none" fill="#000000" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); text-anchor: middle; font-family: Arial; font-size: 14px;" transform="matrix(1.7849,0,0,1.7849,-105.563,-137.1694)" stroke-width="0.5602409638554217"><tspan dy="4.75" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">30</tspan></text></svg></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                
+                                <div class="col-md-12 col-lg-6 col-xl-4">
+                                    <div class="card bg-info m-b-30">
+                                        <div class="card-body">
+                                            <div id="verticalCarousel" class="carousel slide vertical" data-ride="carousel">
+                                                <!-- Carousel items -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="row d-flex justify-content-center text-center">
+                                                            <div class="col-sm-12 carousel-icon">
+                                                                <i class="fa fa-twitter text-white pt-3"></i>
+                                                            </div>
+                                                            <div class="col-6 text-white">
+                                                                <h2>54k</h2>
+                                                                <p class="">Followers</p>
+                                                            </div>
+                                                            <div class="col-6 text-white">
+                                                                <h2>44k</h2>
+                                                                <p class="">Tweets</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="carousel-item">
+                                                        <div class="row d-flex justify-content-center">
+                                                            <div class="col-sm-12 carousel-icon text-center">
+                                                                <i class="fa fa-twitter text-white pt-3"></i>
+                                                            </div>
+                                                            <div class="col-sm-10 mx-auto text-white text-center">
+                                                                <p>Lorem Ipsum is simply dummy text of the <span class="warning">#TWITTER</span> and typesetting industry. A description list is perfect for defining terms.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="card bg-primary ">
+                                        <div class="card-body">
+                                            <div id="verticalCarousel2" class="carousel slide" data-ride="carousel">
+                                                <!-- Carousel items -->
+                                                <div class="carousel-inner">
+                                                    <div class="carousel-item active">
+                                                        <div class="row d-flex justify-content-center">
+                                                            <div class="col-lg-12 carousel-icon text-center">
+                                                                <i class="fa fa-facebook text-white pt-3"></i>
+                                                            </div>
+                                                            <div class="col-sm-10 mx-auto text-white text-center">
+                                                                <p>Lorem Ipsum is simply dummy text of the <mark> FACEBOOK </mark> and typesetting industry.</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="carousel-item">
+                                                        <div class="row d-flex justify-content-center text-white text-center">
+                                                            <div class="col-sm-12 carousel-icon">
+                                                                <i class="fa fa-facebook text-white pt-3"></i>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <h2>54k</h2>
+                                                                <p class="">Followers</p>
+                                                            </div>
+                                                            <div class="col-6">
+                                                                <h2>44k</h2>
+                                                                <p class="">Posts</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-6 col-xl-4">
+                                    <div class="card bg-white m-b-30">
+                                        <div class="card-body new-user">
+                                            
+                                            <div class="row text-center">
+                                                <div class="col-6">
+                                                    <h5><i class="mdi mdi-database mr-2 text-primary font-20"></i> 5 TB</h5>
+                                                    <h6 class="text-lightdark">Bandwidth usage</h6>
+                                                    <span class="text-muted"> <small>June 2018</small></span>
+                                                </div>
+                                                <div class="col-6">
+                                                    <h5><i class="mdi mdi-download mr-2 text-success font-20"></i>5412</h5>
+                                                    <h6 class="text-lightdark">Download count</h6>
+                                                    <span class="text-muted"> <small>June 2018</small></span>
+                                                </div>
+                                            </div>
+                                            <div id="morris-area-chart" style="height: 310px; position: relative; -webkit-tap-highlight-color: rgba(0, 0, 0, 0);"><svg height="310" version="1.1" width="269" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="overflow: hidden; position: relative; left: -0.328125px;"><desc style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);">Created with Raphaël 2.1.2</desc><defs style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></defs><path fill="#4fb6e3" stroke="none" d="M25,220C32.81531091122409,194,48.44593273367228,119.24555403556772,56.26124364489637,116C64.09796636683615,112.74555403556772,79.77141181071568,205.390560875513,87.60813453265546,194C95.42344544387954,182.640560875513,111.05406726632773,29.875,118.86937817755182,25C126.68468908877591,20.125,142.3153109112241,146.875,150.13062182244818,155C157.94593273367227,163.125,173.57655455612047,85.13166894664843,181.39186546734456,90C189.22858818928432,94.88166894664843,204.90203363316388,187.49110807113544,212.73875635510365,194C220.55406726632773,200.49110807113544,236.1846890887759,155,244,142L244,285L25,285Z" fill-opacity="0.1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0.1;"></path><path fill="none" stroke="#03a9f3" d="M25,220C32.81531091122409,194,48.44593273367228,119.24555403556772,56.26124364489637,116C64.09796636683615,112.74555403556772,79.77141181071568,205.390560875513,87.60813453265546,194C95.42344544387954,182.640560875513,111.05406726632773,29.875,118.86937817755182,25C126.68468908877591,20.125,142.3153109112241,146.875,150.13062182244818,155C157.94593273367227,163.125,173.57655455612047,85.13166894664843,181.39186546734456,90C189.22858818928432,94.88166894664843,204.90203363316388,187.49110807113544,212.73875635510365,194C220.55406726632773,200.49110807113544,236.1846890887759,155,244,142" stroke-width="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="25" cy="220" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="56.26124364489637" cy="116" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="87.60813453265546" cy="194" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="118.86937817755182" cy="25" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="150.13062182244818" cy="155" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="181.39186546734456" cy="90" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="212.73875635510365" cy="194" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="244" cy="142" r="0" fill="#03a9f3" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><path fill="#1ed4a7" stroke="none" d="M25,259C32.81531091122409,246,48.44593273367228,207,56.26124364489637,207C64.09796636683615,207,79.77141181071568,267.1361149110807,87.60813453265546,259C95.42344544387954,250.8861149110807,111.05406726632773,148.5,118.86937817755182,142C126.68468908877591,135.5,142.3153109112241,202.125,150.13062182244818,207C157.94593273367227,211.875,173.57655455612047,174.50889192886456,181.39186546734456,181C189.22858818928432,187.50889192886456,204.90203363316388,254.11833105335157,212.73875635510365,259C220.55406726632773,263.8683310533516,236.1846890887759,229.75,244,220L244,285L25,285Z" fill-opacity="0.1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0); fill-opacity: 0.1;"></path><path fill="none" stroke="#00c292" d="M25,259C32.81531091122409,246,48.44593273367228,207,56.26124364489637,207C64.09796636683615,207,79.77141181071568,267.1361149110807,87.60813453265546,259C95.42344544387954,250.8861149110807,111.05406726632773,148.5,118.86937817755182,142C126.68468908877591,135.5,142.3153109112241,202.125,150.13062182244818,207C157.94593273367227,211.875,173.57655455612047,174.50889192886456,181.39186546734456,181C189.22858818928432,187.50889192886456,204.90203363316388,254.11833105335157,212.73875635510365,259C220.55406726632773,263.8683310533516,236.1846890887759,229.75,244,220" stroke-width="0" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></path><circle cx="25" cy="259" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="56.26124364489637" cy="207" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="87.60813453265546" cy="259" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="118.86937817755182" cy="142" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="150.13062182244818" cy="207" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="181.39186546734456" cy="181" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="212.73875635510365" cy="259" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle><circle cx="244" cy="220" r="0" fill="#00c292" stroke="#ffffff" stroke-width="1" style="-webkit-tap-highlight-color: rgba(0, 0, 0, 0);"></circle></svg><div class="morris-hover morris-default-style" style="display: none;"></div></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-12 col-xl-4">
+                                    <div class="card bg-white m-b-30">
+                                        <img src="assets/images/widgets/wather.jpg" alt="" class="img-fluid">
+                                        
+                                        <div class="card-body bg-primary">
+                                            <div class="row">
+                                                <div class="col-6  align-self-center">
+                                                    <div class="row">
+                                                        <div class="col-lg-6 col-sm-6 text-center">
+                                                            <canvas id="partly-cloudy-day" width="70" height="70"></canvas>
+                                                            <h6 class="text-white">SUNDAY <span>25<sup>th</sup></span></h6>
+                                                        </div>
+                                                        <div class="col-lg-6 col-sm-6 text-center align-self-center">
+                                                            <h5 class="mt-0 text-white"><b>32°</b></h5>
+                                                            <p class="text-white  font-12">Partly cloudy</p>
+                                                            <p class="text-white font-12">15km/h - 37%</p>
+                                                        </div>
+                                                        </div><!-- End row -->
+                                                    </div>
+                                                    <div class="col-6 align-self-center">
+                                                        <div class="row">
+                                                            <div class="col-6 text-center">
+                                                                <h6 class="text-white mt-0 font-14">MON</h6>
+                                                                <canvas id="rain" width="28" height="35"></canvas>
+                                                                <h6 class="text-white font-14">38°<i class="wi-degrees"></i></h6>
+                                                            </div>
+                                                            <div class="col-6 text-center">
+                                                                <h6 class="text-white mt-0 font-14">TUE</h6>
+                                                                <canvas id="wind" width="35" height="35"></canvas>
+                                                                <h6 class="text-white font-14">32°<i class="wi-degrees"></i></h6>
+                                                            </div>
+                                                            </div><!-- end row -->
+                                                        </div>
+                                                        </div><!-- end row -->
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12 col-lg-12 col-xl-8 align-self-center">
+                                                <div class="card bg-white m-b-30">
+                                                    <div class="card-body new-user">
+                                                        <h5 class="header-title mb-4 mt-0">Members Profiles</h5>
+                                                        <div class="table-responsive">
+                                                            <table class="table table-hover">
+                                                                <thead>
+                                                                    <tr>
+                                                                        <th class="border-top-0" style="width:60px;">Member</th>
+                                                                        <th class="border-top-0">Name</th>
+                                                                        <th class="border-top-0">Country</th>
+                                                                        <th class="border-top-0">Earnings</th>
+                                                                        <th class="border-top-0">Sales</th>
+                                                                        <th class="border-top-0">Reviews</th>
+                                                                        <th class="border-top-0">Progress</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr>
+                                                                        <td>
+                                                                        <img class="rounded-circle" src="assets/images/users/avatar-2.jpg" alt="user" width="40"> </td>
+                                                                        <td>
+                                                                            <a href="javascript:void(0);">Ruby T. Curd</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <img src="assets/images/flags/us_flag.jpg" alt="" style="width:30px">
+                                                                        </td>
+                                                                        <td>$100</td>
+                                                                        <td>10</td>
+                                                                        <td>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star-half text-warning"></i>
+                                                                            <i class="mdi mdi-star-outline text-warning"></i>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="progress" style="height:8px;">
+                                                                                <div class="progress-bar bg-primary" role="progressbar" aria-valuenow="94" aria-valuemin="0" aria-valuemax="100" style="width: 94%;"></div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                        <img class="rounded-circle" src="assets/images/users/avatar-3.jpg" alt="user" width="40"> </td>
+                                                                        <td>
+                                                                            <a href="javascript:void(0);">William A. Johnson</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <img src="assets/images/flags/french_flag.jpg" alt="" style="width:30px">
+                                                                        </td>
+                                                                        <td>$490</td>
+                                                                        <td>24</td>
+                                                                        <td>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star-half text-warning"></i>
+                                                                            <i class="mdi mdi-star-outline text-warning"></i>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="progress" style="height:8px;">
+                                                                                <div class="progress-bar bg-success" role="progressbar" aria-valuenow="38" aria-valuemin="0" aria-valuemax="100" style="width: 38%;"></div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                        <img class="rounded-circle" src="assets/images/users/avatar-4.jpg" alt="user" width="40"> </td>
+                                                                        <td>
+                                                                            <a href="javascript:void(0);">Bobby M. Gray</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <img src="assets/images/flags/spain_flag.jpg" alt="" style="width:30px">
+                                                                        </td>
+                                                                        <td>$380</td>
+                                                                        <td>19</td>
+                                                                        <td>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star-half text-warning"></i>
+                                                                            <i class="mdi mdi-star-outline text-warning"></i>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="progress" style="height:8px;">
+                                                                                <div class="progress-bar bg-dark" role="progressbar" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" style="width:65%;"></div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                        <img class="rounded-circle" src="assets/images/users/avatar-5.jpg" alt="user" width="40"> </td>
+                                                                        <td>
+                                                                            <a href="javascript:void(0);">Robert N. Carlile</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <img src="assets/images/flags/russia_flag.jpg" alt="" style="width:30px">
+                                                                        </td>
+                                                                        <td>$450</td>
+                                                                        <td>30</td>
+                                                                        <td>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star-half text-warning"></i>
+                                                                            <i class="mdi mdi-star-outline text-warning"></i>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="progress" style="height:8px;">
+                                                                                <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="88" aria-valuemin="0" aria-valuemax="100" style="width: 88%;"></div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    <tr>
+                                                                        <td>
+                                                                        <img class="rounded-circle" src="assets/images/users/avatar-6.jpg" alt="user" width="40"> </td>
+                                                                        <td>
+                                                                            <a href="javascript:void(0);">Ruby T. Curd</a>
+                                                                        </td>
+                                                                        <td>
+                                                                            <img src="assets/images/flags/italy_flag.jpg" alt="" style="width:30px">
+                                                                        </td>
+                                                                        <td>$500</td>
+                                                                        <td>40</td>
+                                                                        <td>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star text-warning"></i>
+                                                                            <i class="mdi mdi-star-half text-warning"></i>
+                                                                            <i class="mdi mdi-star-outline text-warning"></i>
+                                                                        </td>
+                                                                        <td>
+                                                                            <div class="progress" style="height:8px;">
+                                                                                <div class="progress-bar l-blue" role="progressbar" aria-valuenow="17" aria-valuemin="0" aria-valuemax="100" style="width: 17%;"></div>
+                                                                            </div>
+                                                                        </td>
+                                                                    </tr>
+                                                                    
+                                                                </tbody>
+                                                            </table>
+                                                            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-12 col-lg-12 col-xl-4">
+                                                <div class="card bg-white m-b-30">
+                                                    <div class="card-body new-user">
+                                                        <h5 class="header-title mt-0 mb-4">New Users</h5>
+                                                        <ul class="list-unstyled mb-0 pr-3" id="boxscroll2" tabindex="1" style="overflow: hidden; outline: none; cursor: -webkit-grab;">
+                                                            <li class="p-3">
+                                                                <div class="media">
+                                                                    <div class="thumb float-left">
+                                                                        <a href="#">
+                                                                            <img class=" rounded-circle" src="assets/images/users/avatar-5.jpg" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <p class="media-heading mb-0">Ruby T. Curd <i class="fa fa-circle text-success mr-1 pull-right"></i></p>
+                                                                        <small class="pull-right text-muted">Now</small>
+                                                                        <small class="text-muted">Newyork</small>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="p-3">
+                                                                <div class="media">
+                                                                    <div class="thumb float-left">
+                                                                        <a href="#">
+                                                                            <img class=" rounded-circle" src="assets/images/users/avatar-4.jpg" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <p class="media-heading mb-0">William A. Johnson <i class="fa fa-circle text-success mr-1 pull-right"></i></p>
+                                                                        <small class="pull-right text-muted">Now</small>
+                                                                        <small class="text-muted">California</small>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="p-3">
+                                                                <div class="media">
+                                                                    <div class="thumb float-left">
+                                                                        <a href="#">
+                                                                            <img class=" rounded-circle" src="assets/images/users/avatar-3.jpg" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <p class="media-heading mb-0">Robert N. Carlile<i class="fa fa-circle text-danger mr-1 pull-right"></i></p>
+                                                                        <small class="pull-right text-muted">10 min ago</small>
+                                                                        <small class="text-muted">India</small>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="p-3">
+                                                                <div class="media">
+                                                                    <div class="thumb float-left">
+                                                                        <a href="#">
+                                                                            <img class=" rounded-circle" src="assets/images/users/avatar-2.jpg" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <p class="media-heading mb-0">Bobby M. Gray <i class="fa fa-circle text-success mr-1 pull-right"></i></p>
+                                                                        <small class="pull-right text-muted">Now</small>
+                                                                        <small class="text-muted">Australia</small>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="p-3">
+                                                                <div class="media">
+                                                                    <div class="thumb float-left">
+                                                                        <a href="#">
+                                                                            <img class=" rounded-circle" src="assets/images/users/avatar-1.jpg" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <p class="media-heading mb-0">Ruby T. Curd <i class="fa fa-circle text-danger mr-1 pull-right"></i></p>
+                                                                        <small class="pull-right text-muted">36 min ago</small>
+                                                                        <small class="text-muted">New Zealand</small>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="p-3">
+                                                                <div class="media">
+                                                                    <div class="thumb float-left">
+                                                                        <a href="#">
+                                                                            <img class=" rounded-circle" src="assets/images/users/avatar-6.jpg" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <p class="media-heading mb-0">Robert N. Carlile <i class="fa fa-circle text-success mr-1 pull-right"></i></p>
+                                                                        <small class="pull-right text-muted">Now</small>
+                                                                        <small class="text-muted">India</small>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                            <li class="p-3">
+                                                                <div class="media">
+                                                                    <div class="thumb float-left">
+                                                                        <a href="#">
+                                                                            <img class=" rounded-circle" src="assets/images/users/avatar-4.jpg" alt="">
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="media-body">
+                                                                        <p class="media-heading mb-0">Bobby M. Gray<i class="fa fa-circle text-danger mr-1 pull-right"></i></p>
+                                                                        <small class="pull-right text-muted">58 min ago</small>
+                                                                        <small class="text-muted">Australia</small>
+                                                                    </div>
+                                                                </div>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        </div><!-- container -->
+                                        </div> <!-- Page content Wrapper -->
+                                        </div> <!-- content -->
+                                        <footer class="footer">
+                                            © 2018 Annex by Mannatthemes.
+                                        </footer>
+                                    </div>
+                                    <!-- End Right content here -->
+                                </div>
+                                <!-- END wrapper -->
+                                <!-- jQuery  -->
+                                <script src="assets/js/jquery.min.js"></script>
+                                <script src="assets/js/popper.min.js"></script>
+                                <script src="assets/js/bootstrap.min.js"></script>
+                                <script src="assets/js/modernizr.min.js"></script>
+                                <script src="assets/js/detect.js"></script>
+                                <script src="assets/js/fastclick.js"></script>
+                                <script src="assets/js/jquery.slimscroll.js"></script>
+                                <script src="assets/js/jquery.blockUI.js"></script>
+                                <script src="assets/js/waves.js"></script>
+                                <script src="assets/js/jquery.nicescroll.js"></script>
+                                <script src="assets/js/jquery.scrollTo.min.js"></script>
+                                <script src="assets/plugins/skycons/skycons.min.js"></script>
+                                <script src="assets/plugins/raphael/raphael-min.js"></script>
+                                <script src="assets/plugins/morris/morris.min.js"></script>
+                                
+                                <script src="assets/pages/dashborad.js"></script>
+                                <!-- App js -->
+                                <script src="assets/js/app.js"></script>
+                                <script>
+                                /* BEGIN SVG WEATHER ICON */
+                                if (typeof Skycons !== 'undefined'){
+                                var icons = new Skycons(
+                                {"color": "#fff"},
+                                {"resizeClear": true}
+                                ),
+                                list  = [
+                                "clear-day", "clear-night", "partly-cloudy-day",
+                                "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+                                "fog"
+                                ],
+                                i;
+                                for(i = list.length; i--; )
+                                icons.set(list[i], list[i]);
+                                icons.play();
+                                };
+                                // scroll
+                                $(document).ready(function() {
+                                
+                                $("#boxscroll").niceScroll({cursorborder:"",cursorcolor:"#cecece",boxzoom:true});
+                                $("#boxscroll2").niceScroll({cursorborder:"",cursorcolor:"#cecece",boxzoom:true});
+                                
+                                });
+                                </script>
+                                
+                                <div id="ascrail2000" class="nicescroll-rails" style="width: 5px; z-index: auto; cursor: -webkit-grab; position: absolute; top: 1380px; left: 1232.66px; height: 450px; opacity: 0;"><div style="position: relative; top: 0px; float: right; width: 5px; height: 353px; background-color: rgb(206, 206, 206); background-clip: padding-box; border-radius: 5px;"></div></div><div style="cursor: pointer; z-index: auto; height: 18px; width: 18px; background-position: 0px 0px; position: absolute; top: 1381px; left: 1212.66px; opacity: 0;"></div><div id="ascrail2000-hr" class="nicescroll-rails" style="height: 5px; z-index: auto; top: 1825px; left: 968.656px; position: absolute; display: none; width: 264px; opacity: 0;"><div style="position: relative; top: 0px; height: 5px; width: 269px; background-color: rgb(206, 206, 206); background-clip: padding-box; border-radius: 5px;"></div></div></body>
+
+
+                                </html>
