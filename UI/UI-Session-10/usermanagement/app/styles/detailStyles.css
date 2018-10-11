@@ -1,0 +1,28 @@
+body {
+	background-color: #C4C4C5;
+}
+
+#form_data_div {
+	width: 80%;
+	margin: 0px auto;
+}
+
+#form_data_div div {
+	display: flex;
+	margin: auto;
+	padding: 5px;
+}
+
+.info_label {
+	width: 40%;
+	padding: 10px 20px;
+	text-align: right;
+}
+
+.info_value { 
+	width: 20%;
+	padding: 8px 10px 2px 10px;
+	border: 1px solid #55555599;
+	border-radius: 3px;
+	background-color: #ffffff99;
+}
