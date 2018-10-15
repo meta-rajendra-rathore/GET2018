@@ -1,0 +1,24 @@
+{
+  "name": "app",
+  "version": "1.0.0",
+  "description": "Hello world",
+  "main": "app.module.js",
+  "scripts": {
+    "test": "test",
+    "start": "node app.module.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UI/UI-Session-10.git"
+  },
+  "keywords": [
+    "Hi",
+    "bro"
+  ],
+  "author": "Rajendra",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/UI/UI-Session-10/issues"
+  },
+  "homepage": "https://github.com/UI/UI-Session-10#readme"
+}
