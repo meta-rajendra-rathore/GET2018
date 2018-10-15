@@ -10,14 +10,14 @@ String.prototype.repeatify = function (number) {
 //function to remove consecutive repeating characters in a string
 function removeConsecutiveCharacters(inputString) {
     for (var i = 0; i < inputString.length - 2; i++) {
-        var currentConsecutiveCharacterPosition = i;
-        var stringToBeReplaced = inputString.charAt(i);
+        var index = i;
+        var stringToBeReplaced = inputString.charAt(index);
         //find substring containing consecutive repeating characters
-        while (inputString.charAt(currentConsecutiveCharacterPosition) == inputString.charAt(currentConsecutiveCharacterPosition + 1)) {
-            stringToBeReplaced += inputString.charAt(currentConsecutiveCharacterPosition);
-            currentConsecutiveCharacterPosition++;
+        while (inputString.charAt(index) == inputString.charAt(index + 1)) {
+            stringToBeReplaced += inputString.charAt(index);
+            index++;
         }
-        if (currentConsecutiveCharacterPosition > i) {
+        if (index > i) {
             //removes consecutive repeating character substring if exists
             inputString = inputString.replace(stringToBeReplaced, "");
             if(i==0){
