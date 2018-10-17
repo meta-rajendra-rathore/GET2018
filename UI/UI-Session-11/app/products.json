@@ -1,0 +1,96 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Spinach",
+      "price": "0.45",
+      "image": "images/spinach.jpg",
+      "category": "vegetables"
+    },
+    {
+      "id": 2,
+      "name": "Orange",
+      "price": "2.5",
+      "image": "images/orange.jpg",
+      "category": "fruits"
+    },
+    {
+      "id": 3,
+      "name": "Avocado",
+      "price": "5.42",
+      "image": "images/avocado.jpg",
+      "category": "fruits"
+    },
+    {
+      "id": 4,
+      "name": "Saffron",
+      "price": "0.45",
+      "image": "images/saffron.jpg",
+      "category": "spices"
+    },
+    {
+      "id": 5,
+      "name": "Cardamom",
+      "price": "2.0",
+      "image": "images/cardamom.jpg",
+      "category": "spices"
+    },
+    {
+      "id": 6,
+      "name": "Cumin",
+      "price": "0.45",
+      "image": "images/cumin.jpg",
+      "category": "spices"
+    },
+    {
+      "id": 7,
+      "name": "Tomato",
+      "price": "1.45",
+      "image": "images/tomato.jpg",
+      "category": "vegetables"
+    },
+    {
+      "id": 8,
+      "name": "Freshly Baked Bread",
+      "price": "0.45",
+      "image": "images/bakedbread.jpg",
+      "category": "bread"
+    },
+    {
+      "id": 9,
+      "name": "Cinnamon",
+      "price": "2.0",
+      "image": "images/cinnamon.jpg",
+      "category": "spices"
+    },
+    {
+      "id": 10,
+      "name": "Sliced Bread",
+      "price": "1.45",
+      "image": "images/slicedbread.jpg",
+      "category": "bread"
+    }
+  ],
+  "cartItems": [
+    {
+      "id": 1,
+      "quantity": 9
+    },
+    {
+      "id": 6,
+      "quantity": 9
+    },
+    {
+      "id": 3,
+      "quantity": 3
+    },
+    {
+      "id": 10,
+      "quantity": 5
+    },
+    {
+      "id": 2,
+      "quantity": 3
+    }
+  ]
+}

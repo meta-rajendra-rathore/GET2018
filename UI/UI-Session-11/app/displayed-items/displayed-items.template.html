@@ -1,0 +1,25 @@
+<div class="row p-4">
+	<aside class="col-md-3 fixedElement m-2 p-3">
+		<div class="border rounded list-group">
+			<button class="text-left list-group-item" autofocus ng-click="showItems=all">All Categories</button>
+			<button class="text-left list-group-item" ng-click="showItems={category:'bread'}">Bread</button>
+			<button class="text-left list-group-item" ng-click="showItems='category:dairyProducts'">Dairy Products</button>
+			<button class="text-left list-group-item" ng-click="showItems={category:'fruits'}">Fruits</button>
+			<button class="text-left list-group-item" ng-click="showItems={category:'spices'}">Seasoning and Spices</button>
+			<button class="text-left list-group-item" ng-click="showItems={category:'vegetables'}">Vegetables</button>
+		</div>
+	</aside>
+	<section class="col-md-9 row">
+		<div class="item_cards border rounded m-4" ng-repeat="product in products | filter:showItems">
+			<img src="{{product.image}}">
+			<p class="h4 px-2 pt-2">{{product.name}}</p>
+			<p class="strong px-2">${{product.price}}</p>
+			<button class="button_quantity bg-info border-0 col-md-12 py-2" ng-click="addItemToCart(product.id)" ng-show="{{showQuantityInCart(product.id) == 0}}">Add to Cart</button>
+			<div class="d-flex border border-info justify-content-between" ng-show="{{showQuantityInCart(product.id) > 0}}">
+				<button ng-click="changeQuantity(product.id, '-')" class="button_quantity bg-info border-0 rounded-right p-2">-</button>
+				<div class="text-center py-2" ng-bind="showQuantityInCart(product.id)"> in cart</div>
+				<button ng-click="changeQuantity(product.id, '+')" class="button_quantity text-center bg-info border-0 rounded-left p-2">+</button>
+			</div>
+		</div>
+	</section>
+</div>
