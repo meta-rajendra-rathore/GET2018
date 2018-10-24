@@ -31,6 +31,8 @@ aside button:focus {
     background-color: #1C6FFB;
 }
 
-section button {
-	color: white !important;
+.button_quantity {
+	color: white;
+	padding: 10px 20px;
+	border: none;
 }
